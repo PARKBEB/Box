@@ -6,7 +6,8 @@ public class Main3 {
 	// 최종 완료! 클래스생성, 객체 생성
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
-
+		Drink2 c1 = new Drink2();
+		c1.change = 2;
 		Drink2 d1 = new Drink2();
 		d1.name = "콜라";
 		d1.price = 500;
@@ -28,16 +29,15 @@ public class Main3 {
 		while (!ch.equals("")) {
 			for (int i = 0; i < list.size(); i++) {
 				if (ch.equals(list.get(i).name)) {
-					System.out.print(list.get(i).price);
-					break;
-				} else if ((!ch.equals(list.get(i).name))) {
-					System.out.print("없는 음료 입니다");
+					System.out.print(list.get(i).price * c1.change);
+					ch = "z";
 					break;
 				}
-			}
+			} 
+			if(!ch.equals("z")) {
+			System.out.print("없는 메뉴입니다");
 			break;
+			}
 		}
-
 	}
-
 }
