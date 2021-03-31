@@ -5,12 +5,11 @@ import java.util.Scanner;
 public class Main3 {
 	// 최종 완료! 클래스생성, 객체 생성
 	public static void main(String[] args) {
-		Scanner scn = new Scanner(System.in);
-		Drink2 c1 = new Drink2();
-		c1.change = 2;
+		Scanner scn = new Scanner(System.in);	
 		Drink2 d1 = new Drink2();
 		d1.name = "콜라";
 		d1.price = 500;
+		d1.change = 2;
 		Drink2 d2 = new Drink2();
 		d2.name = "환타";
 		d2.price = 600;
@@ -29,7 +28,7 @@ public class Main3 {
 		while (!ch.equals("")) {
 			for (int i = 0; i < list.size(); i++) {
 				if (ch.equals(list.get(i).name)) {
-					System.out.print(list.get(i).price * c1.change);
+					System.out.print(list.get(i).price * d1.change);
 					ch = "z";
 					break;
 				}
