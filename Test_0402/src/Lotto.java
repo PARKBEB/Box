@@ -1,7 +1,5 @@
 /*로또 생성기
 번호 6개 추출 (1 ~ 45)
-조건 : 번호 3개는 20 미만, 나머지 번호 3개는 20이상
-실행 출력 예 : 1 / 2 / 3 / 20 / 21 / 45
 */
 public final class Lotto {
 	public static void main(String[] args) {
