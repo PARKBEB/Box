@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/*default*/
+* {margin:0px; padding:0px; vertical-align: baseline; font-family:"azo-sans-web", sans-serif; line-height:1em; font-size:13px; text-align:center; color:#212121;}
+
+html,body{
+	height: 100%;	
+}
+
+.backImg{
+	background-image: url("/resources/img/checkBackground.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+}
+
+/*로고*/
+.smallTitleImg{
+	background-image: url("/resources/img/smallLogo.png");
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: -55px center;
+	height: 25%;
+}
+
+.boxUp{
+	width: 100%;
+	height: 35%;
+	background-color: #000;
+}
+
+.boxDown{
+	width: 100%;
+	height: 40%;
+	background-color: #000;
+	margin-top: 50%;
+}
+
+

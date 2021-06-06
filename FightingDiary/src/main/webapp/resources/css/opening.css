@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+/*default*/
+* {margin:0px; padding:0px; vertical-align: baseline; font-family:"azo-sans-web", sans-serif; line-height:1em; font-size:13px; text-align:center; color:#212121;}
+
+html,body{
+	height: 100%;	
+}
+
+.backImg{
+	background-image: url("/resources/img/checkBackground.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+}
+
+.titleImg{
+	background-image: url("/resources/img/bigLogo.png");
+	background-repeat: no-repeat;
+	background-size: 150%;
+	background-position: center;
+	height: 70%;
+}
+
+.touch p{
+	margin-top: -30%;
+	font-size: 88px;
+	font-family: 'Roboto';
+}
+
+.touch a{
+	text-decoration: none;
+}
+
+footer p{
+	margin-top:68%;
+	font-size: 45px;
+}
