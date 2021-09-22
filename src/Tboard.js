@@ -1,49 +1,52 @@
 import React, { useState } from 'react';
-import './Main.css';
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
-import { IconContext } from 'react-icons'; 
+import './Tboard.css'; 
 import { Link } from 'react-router-dom';
-import { SidebarData } from './SidebarData';
-
 
 function Tboard() {
-  const [sidebar, setSidebar] = useState(false);
-  const showSidebar = () => setSidebar(!sidebar);
   return (
-    <IconContext.Provider value={{ color: '#fff'}}>
-      <div className="main">
-        <Link to= "#" className= "menu-bars">
-          <FaIcons.FaBars onClick= {showSidebar} />
-        </Link>
-          <h1>Sanha Information Technology</h1>
-      </div>
-      <nav className= { sidebar ? 'nav-menu active' : 'nav-menu'} >
-        <ul className= "nav-menu-items" onClick= {showSidebar}>
-          <li className= "navbar-toggle">
-            <Link to= "#" className= "menu-bars">
-              <AiIcons.AiOutlineClose />
-            </Link>
-          </li>
-          {SidebarData.map((item, index) => {
-            return(
-              <li key= {index} className= {item.cName}>
-                <Link to= {item.path}>
-                  {item.icon}
-                  <span>{item.title}</span>
-                </Link>
-                </li>
-            );
-          })}
-        </ul>
-      </nav>
-      {/* TestBoard */}
-      <div className= "mBoard">
+<div class="main-wrap">
+    <div id="main-nav">
+        <div class="main-nav-left">
+            <a href="javascript:nav_close();" class="main-nav-close">                     
+            </a>
+            <p><Link>강의관리</Link></p>
+            <p><Link>시험관리</Link></p>
+            <p><Link>과제관리</Link></p>
+            <p><Link>평가관리</Link></p>
+        </div>
+
+        <a href="javascript:nav_close();" class="main-nav-right">
+
+        </a>
+    </div>
+
+    <div class="main-top">
+        <a href="javascript:nav_open();"></a>
+        <span>SANHA INFORMATION TECHNOLOGY</span>
+    </div>
+
+    <div class="table-mid">
         <table>
-          <th>ff</th>
+            <thead>
+                <tr>
+                    <th>시험관리</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>홍길동</td>
+                </tr>
+                <tr>
+                    <td>홍길동</td>
+                </tr>
+                <tr>
+                    <td>홍길동</td>
+                </tr>
+            </tbody>
         </table>
-      </div>
-    </IconContext.Provider>
+    </div>
+</div>
+   
   );
 }
 

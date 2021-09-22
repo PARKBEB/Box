@@ -1,50 +1,52 @@
 import React, { useState } from 'react';
-import './Main.css';
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
-import { IconContext } from 'react-icons'; 
+import './Main.css'; 
 import { Link } from 'react-router-dom';
-import { SidebarData } from './SidebarData';
-import mImg from "./img/mImg.png"
+
+function nav_open()
+{
+  document.getElementById("main-nav").style.display = 'flex';
+}
+
+function nav_close()
+{
+  document.getElementById("main-nav").style.display = 'none';
+}
 
 function Main() {
-  const [sidebar, setSidebar] = useState(false);   
-  const showSidebar = () => setSidebar(!sidebar);
   return (
-    <IconContext.Provider value={{ color: '#fff'}}>
-      <div className="main">
-        <Link to= "#" className= "menu-bars">
-          <FaIcons.FaBars onClick= {showSidebar} />
-        </Link>
-          <h1>Sanha Information Technology</h1>
-      </div>
-      <nav className= { sidebar ? 'nav-menu active' : 'nav-menu'} >
-        <ul className= "nav-menu-items" onClick= {showSidebar}>
-          <li className= "navbar-toggle">
-            <Link to= "#" className= "menu-bars">
-              <AiIcons.AiOutlineClose />
-            </Link>
-          </li>   
-          {/* SidebarData를 순서대로 담기*/}           
-          {SidebarData.map((item, index) => {   
-            return(
-              <li key= {index} className= {item.cName}>
-                <Link to= {item.path}>
-                  {item.icon}
-                  <span>{item.title}</span>
-                </Link>
-                </li>
-            );
-          })}
-        </ul>
-      </nav>
-      {/* MainBoard */}
-      <div className= "mBoard">
-        <img src= {mImg} alt="backImg" />
-        <p>산하정보기술 교육프로그램<br/><br/>
-          시험 및 과제에대한 결과를 확인하세요</p>
-      </div>
-    </IconContext.Provider>
+    <div class="main-wrap">
+    <div id="main-nav">
+        <div class="main-nav-left">
+            <a href="javascript:nav_close();" class="main-nav-close">                     
+            </a>
+            <p><Link>강의관리</Link></p>
+            <p><Link to= "/Tboard">시험관리</Link></p>
+            <p><Link>과제관리</Link></p>
+            <p><Link>평가관리</Link></p>
+        </div>
+
+        <a href="javascript:nav_close();" class="main-nav-right">
+
+        </a>
+    </div>
+
+    <div class="main-top">
+        <a href="javascript:nav_open();"></a>
+        <span>SANHA INFORMATION TECHNOLOGY</span>
+
+    </div>
+
+    <div class="main-mid">
+        <p>
+            산하정보기술 교육프로그램
+        </p>
+        <p>
+            시험 및 과제에 대한 결과를 확인하세요.        
+        </p>
+    </div>
+
+</div>
+   
   );
 }
 

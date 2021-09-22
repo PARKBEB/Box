@@ -1,22 +1,88 @@
 @media (prefers-reduced-motion: no-preference) {
-    .Login {
-      background-color: #f2f2f2;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column; /* 세로 */
-      align-items: center;
-      text-align: center;
-      justify-content: center;
-    }
+#root {
+    height: 100%;
+}
+ 
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.login-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-image: url('img/city.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+.login-box {
+    width: 600px;
+    height: 500px;
+    background-color: rgba(11, 0, 51, 0.5);
+    border-radius: 20px;
     
-    h1{
-      color: #151757;
-      font-size: 50px;
-      font-weight: 500;
-    }
+}
+
+.login-box div {
+    text-align: center;
+
+}
+
+.login-box div h2 {
+    padding-top: 60px;
+    color: #fff;
+    font-size: 33px;
+
+}
+
+.login-box div .login-input-text {
+    margin-top: 30px;
+    width: 300px;
+    height: 50px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+.login-box div .login-input-text:focus {
+    outline: none;
+}
+
+
+.login-box div .login-input-text::placeholder {
+    color: #aaa;
+}
+
+.login-box div .login-checkbox-wrap {
+    margin-top: 22px;
+    color: #fff;
+    font-size: 12px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box div .login-checkbox {
     
-    span{
-      color: #808080;
-      font-size: larger;
-    }
-    }
+    width: 16px;
+    height: 16px;
+    
+}
+
+.login-box div .login-btn {
+    margin-top: 26px;
+    width: 300px;
+    height: 50px;
+    background: linear-gradient(to right, rgb(0, 132, 255), rgb(0, 162, 255));
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+}
+}

@@ -7,27 +7,28 @@ function Login({history}) {
       history.push("/Main")
     }
   return (
-    <div className="Login">
-        <h1>
-          산하정보기술 로그인
-        </h1>
-          <span>
-            Email address <br/>
-            <input type= "text" placeholder= "Enter email" />
-          </span>
-          <span>
-            Password <br/>
-            <input type= "password" placeholder= "Enter password" />
-          </span>
-          <span>
-            <input type= "checkbox" /> Remember me
-          </span>
-          <Link to= "/Main">
-            <p>해당 링크를 클릭하세요</p>
-          </Link>
-          <div>
-              <button type= 'button' onClick= {onClickLogin}>Login</button>
-          </div>
+    <div class="login-wrap">
+            <div class="login-box">
+                <div>
+                    <h2>산하정보기술 로그인</h2>
+                </div>
+                <div>
+                    <input type="text" class="login-input-text" placeholder="User Email" />
+                </div>
+                <div>
+                    <input type="password" class="login-input-text" placeholder="User Password" />
+                </div>
+                <div>
+                    <div class="login-checkbox-wrap">
+                        Remember me <input type="checkbox" class="login-checkbox" />
+                    </div>
+                    
+                </div>
+                <div>
+                    <button type= 'button' className= "login-btn" onClick= {onClickLogin}>Login</button>
+                </div>
+
+            </div>
     </div>
   );
 }
