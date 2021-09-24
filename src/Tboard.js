@@ -11,9 +11,15 @@ function Tboard() {
         <div className= "menu-bars" onClick= {showSidebar}></div>       
         <span>SANHA INFORMATION TECHNOLOGY</span>
     </div>
-    <ul className= {sidebar ? 'nav-menu active' : 'nav-menu'}>
+    <nav className= {sidebar ? 'nav-menu active' : 'nav-menu'}>
       <div className= "menu-bars-close" onClick= {showSidebar}></div>
-    </ul>
+      <ul>
+        <li>강의관리</li>
+        <Link to= "/Tboard"><li>시험관리</li></Link>
+        <li>과제관리</li>
+        <li>평가관리</li>
+      </ul>
+    </nav>
     <div class="table-mid">
     <h2>시험 관리</h2>
         <table>

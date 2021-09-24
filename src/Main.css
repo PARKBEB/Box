@@ -55,7 +55,7 @@
   .main-wrap .menu-bars-close {
       display: inherit;
       margin-top: 34px;
-      margin-bottom: 50px;
+      margin-left: 12%;
       width: 32px;
       height: 32px;
       background-image: url('img/iconmonstr-x-mark-2-32.png');
@@ -70,7 +70,7 @@
       height:100vh;
       display:flex;
       position:fixed;
-      top:-16px;
+      top: 0;
       left:-100%;
       transition: 850ms;
     }
@@ -78,4 +78,22 @@
       left: 0;
       transition: 350ms;
     }
+  
+    #root ul {
+        margin-top: 30%;
+        margin-left: -10%;
+        font-size: 22px;
+    }
+
+    #root li {
+        margin-top: 50%;
+        display: flex;
+        color: #fff;
+    }
+
+    ul :link{
+        text-decoration: none;
+    }
+
+   
   }
