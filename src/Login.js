@@ -1,26 +1,25 @@
 import './Login.css';
 import React from "react";
-import {Link} from 'react-router-dom';
 
 function Login({history}) {
     function onClickLogin(){
       history.push("/Main")
     }
   return (
-    <div class="login-wrap">
-            <div class="login-box">
+    <div className="login-wrap">
+            <div className="login-box">
                 <div>
                     <h2>산하정보기술 로그인</h2>
                 </div>
                 <div>
-                    <input type="text" class="login-input-text" placeholder="User Email" />
+                    <input type="text" className="login-input-text" placeholder="User Email" />
                 </div>
                 <div>
-                    <input type="password" class="login-input-text" placeholder="User Password" />
+                    <input type="password" className="login-input-text" placeholder="User Password" />
                 </div>
                 <div>
-                    <div class="login-checkbox-wrap">
-                        Remember me <input type="checkbox" class="login-checkbox" />
+                    <div className="login-checkbox-wrap">
+                        Remember me <input type="checkbox" className="login-checkbox" />
                     </div>
                     
                 </div>
