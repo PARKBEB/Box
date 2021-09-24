@@ -23,3 +23,14 @@ button{
   color: #fff;
   font-size: 20px;
 }
+
+.login-input-text{
+  margin-top: 30px;
+  width: 300px;
+  height: 30px;
+}
+
+.login-input-text::placeholder{
+  color: #aaa;
+  font-size: 17px;
+}
