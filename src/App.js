@@ -5,6 +5,7 @@ class App extends React.Component{
   state = {
     isLoading: true,
     movies: []
+    consol.log(" ")
   };
 
   componentDidMount(){
