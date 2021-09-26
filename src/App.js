@@ -16,5 +16,5 @@ class App extends React.Component{
     return <div>{isLoading ? "Loading" : "We are ready"}</div>
   }
 }
-consol.log("d")
+
 export default App;
