@@ -20,11 +20,11 @@ public class InfoController{
 	@PostMapping("/users/post")
 	public ArrayList<String> userPost(@RequestParam("id")String id,@RequestParam("name")String name,@RequestParam("team")String team) {
 		
-		System.out.print(user_list);
-		
 		user_list.add(id);
 		user_list.add(name);
 		user_list.add(team);
+		
+		System.out.print(user_list);
 		
 		return user_list;
 	}
