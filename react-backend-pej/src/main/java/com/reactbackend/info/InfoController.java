@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class InfoController{
 
-	ArrayList<String> user_list = new ArrayList<>();
+	ArrayList<String> user_list = new ArrayList<String>();
 	
 	@GetMapping("/users/get")
 	public ArrayList<String> userGet(){
@@ -20,7 +20,6 @@ public class InfoController{
 	@PostMapping("/users/post")
 	public ArrayList<String> userPost(@RequestParam("id")String id,@RequestParam("name")String name,@RequestParam("team")String team) {
 		
-		System.out.print("도착은 함");
 		System.out.print(user_list);
 		
 		user_list.add(id);
