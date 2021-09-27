@@ -1,6 +1,6 @@
 import axios from 'axios';
 import './App.css';
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 
 function App() {
 
@@ -21,6 +21,7 @@ function App() {
         [name]: value,
       });
     };
+    
   /*const [id, setId]     = useState([]);
     const [name, setName] = useState([]);
     const [team, setTeam] = useState([]);
@@ -74,7 +75,6 @@ function App() {
       <div className="App">
           <header className="App-header">
               ID: {id} NAME: {name} TEAM: {team} 
-              
               <h1 className="App-title">
                   <input type= "text" className= "login-input-text"  name= "id"   onChange= {onChange}  placeholder= "id"></input>
                   <input type= "text" className= "login-input-text"  name= "name" onChange= {onChange}  placeholder= "name"></input>
