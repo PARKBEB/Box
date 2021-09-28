@@ -3,7 +3,6 @@ import './App.css';
 import React, {useState} from 'react';
 
 function App() {
-  const [uer, setUser] =useState([]);
   const [inputs, setInputs] = useState({
       id: "",
       name: "",
