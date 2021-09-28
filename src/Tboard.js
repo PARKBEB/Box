@@ -1,25 +1,15 @@
 import React, { useState } from 'react';
 import './Tboard.css'; 
 import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.css';
 
 function Tboard() {
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
 
-    const today= () =>{
-        const now= new Date();
-        const year= now.getFullYear();
-        const month= now.getMonth() +1;
-        const day= now.getDate();
-        const hours = now.getHours();
-        const minutes = now.getMinutes();
-
-    return year + '-' + month + '-' + day + ' ' + hours + ':' + minutes;
-    }
-
   return (
-    <div class="main-wrap">
-    <div className="main-top">
+    <div className="main-wrap-tboard">
+        <div className="main-top">
             <div className= "menu-bars" onClick= {showSidebar}></div>       
             <span>SANHA INFORMATION TECHNOLOGY</span>
         </div>
@@ -32,6 +22,63 @@ function Tboard() {
             <li>평가관리</li>
         </ul>
         </nav>
+        
+        <div className= "main-mid">
+            <div className="container">
+                <div className="row">
+                    <div className="col-md">
+                        <span>1분기 시험과제</span>
+                    </div>
+                    <div className="col-md">
+                        <span>1분기 시험과제</span>
+                    </div>
+                    <div className="col-md">
+                        <span>1분기 시험과제</span>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-sm">
+                        <Link to= "/Tmanagement">
+                            <h2>[풀스택]</h2>
+                            <p>프로트엔드 + 백엔드</p>
+                        </Link>
+                    </div>
+                    <div className="col-sm">
+                        <h2>[백엔드]</h2>
+                        <p>Java, C, SpringBoot</p>
+                    </div>
+                    <div className="col-sm">
+                        <h2>[프론트엔드]</h2>
+                        <p>VueJS, ReactJS, Html</p>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md">
+                        <span>1분기 시험과제</span>
+                    </div>
+                    <div className="col-md">
+                        <span>1분기 시험과제</span>
+                    </div>
+                    <div className="col-md">
+                        <span>1분기 시험과제</span>
+                    </div>
+                </div>
+                <div className="row">
+                <div className="col-sm">
+                        <h2>[풀스택]</h2>
+                        <p>프로트엔드 + 백엔드</p>
+                    </div>
+                    <div className="col-sm">
+                        <h2>[백엔드]</h2>
+                        <p>Java, C, SpringBoot</p>
+                    </div>
+                    <div className="col-sm">
+                        <h2>[프론트엔드]</h2>
+                        <p>VueJS, ReactJS, Html</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
   );
 }
