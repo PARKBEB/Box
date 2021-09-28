@@ -20,11 +20,6 @@ function App() {
       });
     };
 
-  /*const [id, setId]     = useState([]);
-    const [name, setName] = useState([]);
-    const [team, setTeam] = useState([]);
-  */
-
   function get(){
     const url= "/users/get";
 
