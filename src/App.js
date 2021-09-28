@@ -26,7 +26,7 @@ function App() {
       console.log("성공");
   })
     .catch(function(error) {
-        console.log("실패");
+      console.log("실패");
     }) 
   }
 
