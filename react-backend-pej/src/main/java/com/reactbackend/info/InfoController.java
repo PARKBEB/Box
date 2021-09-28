@@ -21,7 +21,7 @@ public class InfoController{
 	}
 	
 	@PostMapping("/users/post")
-	public ArrayList<String> userPost(@RequestParam("id")String id,@RequestParam("name")String name,@RequestParam("team")String team) {
+	public ArrayList<String> userPost(String id, String name, String team) {
 			
 		user_list.add(id);
 		user_list.add(name);
