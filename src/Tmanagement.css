@@ -1,69 +1,67 @@
 @media (prefers-reduced-motion: no-preference) {
         html, body {
-          margin: 0;
-          height: 100%;
+            margin: 0;
+            height: 100%;
       }
       
       .main-wrap-tboard {
-         position: relative;
-         height: 100%;
-         background-image: linear-gradient( rgba(55, 117, 200, 0.6), rgba(55, 117, 200, 0.6) ),url('img/green.jpg');
-         background-position: top;
-         background-repeat: no-repeat;
-         background-size: cover;
+            position: relative;
+            height: 100%;
+            background-image: linear-gradient( rgba(55, 117, 200, 0.6), rgba(55, 117, 200, 0.6) ),url('img/green.jpg');
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
       }
       
       .main-wrap-tboard .main-top {
-          height: 100px;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
       }
       
       .main-wrap-tboard .main-top .menu-bars {
-          margin-left: 32px;
-          width: 32px;
-          height: 32px;
-          transition: 350ms;
-          background-image: url('img/iconmonstr-menu-1-32.png');
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
+            margin-left: 32px;
+            width: 32px;
+            height: 32px;
+            background-image: url('img/iconmonstr-menu-1-32.png');
+            background-repeat: no-repeat;
+            background-size: cover;
       }
       
       .main-wrap-tboard .main-top span {
-          margin-right: 32px;
-          color: #fff;
-          font-size: 24px;
-          font-weight: bold;
+            margin-right: 32px;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
       
       }
     
       .main-wrap-tboard .menu-bars-close {
-          display: inherit;
-          margin-top: 34px;
-          margin-left: 12%;
-          width: 32px;
-          height: 32px;
-          background-image: url('img/iconmonstr-x-mark-2-32.png');
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
+            display: inherit;
+            margin-top: 34px;
+            margin-left: 12%;
+            width: 32px;
+            height: 32px;
+            background-image: url('img/iconmonstr-x-mark-2-32.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
       }
       
         .nav-menu {
-          background-color: #060b26;
-          width: 250px;
-          height:100vh;
-          display:flex;
-          position:fixed;
-          top: 0;
-          left:-100%;
-          transition: 850ms;
+            background-color: #060b26;
+            width: 250px;
+            height:100vh;
+            display:flex;
+            position:fixed;
+            top: 0;
+            left:-100%;
+            transition: 850ms;
         }
         .nav-menu.active {
-          left: 0;
-          transition: 350ms;
+            left: 0;
+            transition: 350ms;
         }
       
         #root ul {
@@ -79,4 +77,34 @@
             
         }
 
+        .main-mid-code .row{
+            margin-left: 17%;
+        }
+
+        .main-mid-code .row .col-md-5{
+            background-color: black;
+            height: 650px;
+        }
+
+        .btn-code{
+            margin-left: 61.5%;
+            margin-top: 18px;
+        }
+
+        .btn-code-name{
+            margin-right: 5px;
+            background: linear-gradient(to right, rgb(0, 132, 255), rgb(0, 162, 255));
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            font-size: 22px;
+        }
+
+        .btn-code-next{
+            background: linear-gradient(to right, rgb(0, 205, 100), rgb(0, 205, 132));
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            font-size: 22px;
+        }
     }

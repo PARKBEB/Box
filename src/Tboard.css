@@ -94,11 +94,13 @@
             border-radius: 7px;
         }
 
-        .main-mid .container .row .col-md span{
+        .main-mid .container .row .col-md p{
             background-color: #c5e1a5;
             border: 1px solid gray;
             border-radius: 20px;
-            padding: 4px 13px 4px 13px;
+            margin-top: 2%;
+            width: 140px;
+            text-align: center;
         }
         
         .main-mid .container .row .col-sm{
@@ -116,6 +118,7 @@
         }
 
         .main-mid .container .row .col-sm h2{
+            margin-top: 17px;
             font-size: 25px;
             text-align: center;
             color: black;

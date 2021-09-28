@@ -27,13 +27,13 @@ function Tboard() {
             <div className="container">
                 <div className="row">
                     <div className="col-md">
-                        <span>1분기 시험과제</span>
+                        <p>1분기 시험과제</p>
                     </div>
                     <div className="col-md">
-                        <span>1분기 시험과제</span>
+                        <p>1분기 시험과제</p>
                     </div>
                     <div className="col-md">
-                        <span>1분기 시험과제</span>
+                        <p>1분기 시험과제</p>
                     </div>
                 </div>
                 <div className="row">
@@ -44,37 +44,47 @@ function Tboard() {
                         </Link>
                     </div>
                     <div className="col-sm">
-                        <h2>[백엔드]</h2>
-                        <p>Java, C, SpringBoot</p>
+                        <Link to= "/Tmanagement">
+                            <h2>[백엔드]</h2>
+                            <p>Java, C, SpringBoot</p>
+                        </Link>
                     </div>
                     <div className="col-sm">
-                        <h2>[프론트엔드]</h2>
-                        <p>VueJS, ReactJS, Html</p>
+                        <Link to= "/Tmanagement">
+                            <h2>[프론트엔드]</h2>
+                            <p>VueJS, ReactJS, Html</p>
+                        </Link>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-md">
-                        <span>1분기 시험과제</span>
+                        <p>1분기 시험과제</p>
                     </div>
                     <div className="col-md">
-                        <span>1분기 시험과제</span>
+                        <p>1분기 시험과제</p>
                     </div>
                     <div className="col-md">
-                        <span>1분기 시험과제</span>
+                        <p>1분기 시험과제</p>
                     </div>
                 </div>
                 <div className="row">
                 <div className="col-sm">
-                        <h2>[풀스택]</h2>
-                        <p>프로트엔드 + 백엔드</p>
+                        <Link to= "/Tmanagement">
+                            <h2>[풀스택]</h2>
+                            <p>프로트엔드 + 백엔드</p>
+                        </Link>
                     </div>
                     <div className="col-sm">
-                        <h2>[백엔드]</h2>
-                        <p>Java, C, SpringBoot</p>
+                        <Link to= "/Tmanagement">
+                            <h2>[백엔드]</h2>
+                            <p>Java, C, SpringBoot</p>
+                        </Link>
                     </div>
                     <div className="col-sm">
-                        <h2>[프론트엔드]</h2>
-                        <p>VueJS, ReactJS, Html</p>
+                        <Link to= "/Tmanagement">
+                            <h2>[프론트엔드]</h2>
+                            <p>VueJS, ReactJS, Html</p>
+                        </Link>
                     </div>
                 </div>
             </div>
