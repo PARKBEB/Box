@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Main() {
   const [sidebar, setSidebar] = useState(false);
+  console.log(sidebar);
   const showSidebar = () => setSidebar(!sidebar);
   return (
   <div className="main-wrap">
@@ -21,12 +22,8 @@ function Main() {
       </ul>
     </nav>
     <div className="main-mid">
-        <p>
-            산하정보기술 교육프로그램
-        </p>
-        <p>
-            시험 및 과제에 대한 결과를 확인하세요.        
-        </p>
+
+
     </div>
   </div>
    

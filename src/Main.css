@@ -44,16 +44,7 @@
       padding-left: 50%;
   }
   
-  .main-wrap .main-mid p {
-      color: #fff;
-      font-size: 38px;
-      font-weight: bold;
-      text-shadow: 2px 2px 10px #000;
-  }
-  
-  
   .main-wrap .menu-bars-close {
-      display: inherit;
       margin-top: 34px;
       margin-left: 12%;
       width: 32px;

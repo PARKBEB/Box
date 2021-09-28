@@ -32,41 +32,7 @@ function Tboard() {
             <li>평가관리</li>
         </ul>
         </nav>
-        <div class="table-mid">
-        <h2>시험 관리</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>이름</th>
-                        <th>분기</th>
-                        <th>제출상황</th>
-                        <th>제출일자</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>홍길동</td>
-                        <td>1분기</td>
-                        <td>제출완료</td>
-                        <td>{today()}</td>
-                    </tr>
-                    <tr>
-                        <td>홍길동</td>
-                        <td>1분기</td>
-                        <td>제출완료</td>
-                        <td>{today()}</td>
-                    </tr>
-                    <tr>
-                        <td>홍길동</td>
-                        <td>1분기</td>
-                        <td>제출완료</td>
-                        <td>{today()}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
     </div>
-   
   );
 }
 
