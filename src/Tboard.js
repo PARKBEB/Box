@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 function Tboard() {
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
-
   return (
     <div className="main-wrap-tboard">
         <div className="main-top">
@@ -22,7 +21,6 @@ function Tboard() {
             <li>평가관리</li>
         </ul>
         </nav>
-        
         <div className= "main-mid">
             <div className="container">
                 <div className="row">

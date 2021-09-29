@@ -25,7 +25,7 @@ function Tboard() {
             <div className= "row">    
                 <div class= "col-md-5"></div>
                 <div class= "col-md-5"></div>
-                </div>
+            </div>
         </div>
         <div className= "btn-code">
             <button className= "btn-code-name" id= "back">이전</button>

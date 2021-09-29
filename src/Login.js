@@ -20,13 +20,11 @@ function Login({history}) {
                 <div>
                     <div className="login-checkbox-wrap">
                         Remember me <input type="checkbox" className="login-checkbox" />
-                    </div>
-                    
+                    </div> 
                 </div>
                 <div>
                     <button type= 'button' className= "login-btn" onClick= {onClickLogin}>Login</button>
                 </div>
-
             </div>
     </div>
   );

@@ -1,135 +1,132 @@
 @media (prefers-reduced-motion: no-preference) {
-    @media (prefers-reduced-motion: no-preference) {
-        html, body {
-          margin: 0;
-          height: 100%;
-      }
-      
-      .main-wrap-tboard {
-          background-color: #DEDEDE;
-          height: 100%;
-        }
-      
-      .main-wrap-tboard .main-top {
-          height: 100px;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-      }
-      
-      .main-wrap-tboard .main-top .menu-bars {
-          margin-left: 32px;
-          width: 32px;
-          height: 32px;
-          transition: 350ms;
-          background-image: url('img/iconmonstr-menu-1-32.png');
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-      }
-      
-      .main-wrap-tboard .main-top span {
-          margin-right: 32px;
-          color: #fff;
-          font-size: 24px;
-          font-weight: bold;
-      
-      }
-    
-      .main-wrap-tboard .menu-bars-close {
-          display: inherit;
-          margin-top: 34px;
-          margin-left: 12%;
-          width: 32px;
-          height: 32px;
-          background-image: url('img/iconmonstr-x-mark-2-32.png');
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-      }
-      
-        .nav-menu {
-          background-color: #060b26;
-          width: 250px;
-          height:100vh;
-          display:flex;
-          position:fixed;
-          top: 0;
-          left:-100%;
-          transition: 850ms;
-        }
-        .nav-menu.active {
-          left: 0;
-          transition: 350ms;
-        }
-      
-        #root ul {
-            margin-top: 30%;
-            margin-left: -10%;
-            font-size: 22px;
-        }
-    
-        #root li {
-            margin-top: 50%;
-            display: flex;
-            color: #fff;
-            
-        }
+    html, body {
+        margin: 0;
+        height: 100%;
+    }
 
-        .main-mid .container{
-            margin-right: 8%;
-            margin-top: -15px;
-        }
+    .main-wrap-tboard {
+        background-color: #DEDEDE;
+        height: 100%;
+    }
 
-        .main-mid .container .row .col-md{
-            margin-top: 60px;
-            background-image: url('img/sanha.png');
-            background-size: cover;
-            background-color: honeydew;
-            margin-right: 40px;
-            height: 220px;
-            border-radius: 7px;
-            box-shadow: 0 4px 4px 1px darkgray;
-        }
+    .main-wrap-tboard .main-top {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-        .main-mid .container .row .col-md p{
-            background-color: #c8e6c9;
-            color: green;
-            border-radius: 20px;
-            margin-top: 3%;
-            width: 140px;
-            padding: 4px 0 4px 0;
-            text-align: center;
-        }
-        
-        .main-mid .container .row .col-sm{
-            background-color: white;
-            margin-top: -60px;
-            margin-right: 100px;
-            margin-left: 60px;
-            height: 100px;
-            border-radius: 7px;
-            box-shadow: 0 4px 4px 1px darkgray;
-        }
+    .main-wrap-tboard .main-top .menu-bars {
+        margin-left: 32px;
+        width: 32px;
+        height: 32px;
+        transition: 350ms;
+        background-image: url('img/iconmonstr-menu-1-32.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
-        .main-mid .container .row .col-sm :link{
-            text-decoration: none;
-        }
+    .main-wrap-tboard .main-top span {
+        margin-right: 32px;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
 
-        .main-wrap-tboard .main-top :link{
-            text-decoration: none;
-        }
+    .main-wrap-tboard .menu-bars-close {
+        display: inherit;
+        margin-top: 34px;
+        margin-left: 12%;
+        width: 32px;
+        height: 32px;
+        background-image: url('img/iconmonstr-x-mark-2-32.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
-        .main-mid .container .row .col-sm h2{
-            margin-top: 17px;
-            font-size: 25px;
-            text-align: center;
-            color: black;
-        }
+    .nav-menu {
+        background-color: #060b26;
+        width: 250px;
+        height:100vh;
+        display:flex;
+        position:fixed;
+        top: 0;
+        left:-100%;
+        transition: 850ms;
+    }
+    .nav-menu.active {
+        left: 0;
+        transition: 350ms;
+    }
 
-        .main-mid .container .row .col-sm p{
-            text-align: center;
-            color: black;
-        }
+    #root ul {
+        margin-top: 30%;
+        margin-left: -10%;
+        font-size: 22px;
+    }
+
+    #root li {
+        margin-top: 50%;
+        display: flex;
+        color: #fff;
+
+    }
+
+    .main-mid .container{
+        margin-right: 8%;
+        margin-top: -15px;
+    }
+
+    .main-mid .container .row .col-md{
+        margin-top: 60px;
+        background-image: url('img/sanha.png');
+        background-size: cover;
+        background-color: honeydew;
+        margin-right: 40px;
+        height: 220px;
+        border-radius: 7px;
+        box-shadow: 0 4px 4px 1px darkgray;
+    }
+
+    .main-mid .container .row .col-md p{
+        background-color: #c8e6c9;
+        color: green;
+        border-radius: 20px;
+        margin-top: 3%;
+        width: 140px;
+        padding: 4px 0 4px 0;
+        text-align: center;
+    }
+
+    .main-mid .container .row .col-sm{
+        background-color: white;
+        margin-top: -60px;
+        margin-right: 100px;
+        margin-left: 60px;
+        height: 100px;
+        border-radius: 7px;
+        box-shadow: 0 4px 4px 1px darkgray;
+    }
+
+    .main-mid .container .row .col-sm :link{
+        text-decoration: none;
+    }
+
+    .main-wrap-tboard .main-top :link{
+        text-decoration: none;
+    }
+
+    .main-mid .container .row .col-sm h2{
+        margin-top: 17px;
+        font-size: 25px;
+        text-align: center;
+        color: black;
+    }
+
+    .main-mid .container .row .col-sm p{
+        text-align: center;
+        color: black;
     }
 }
