@@ -1,75 +1,84 @@
 @media (prefers-reduced-motion: no-preference) {
     html, body {
-      margin: 0;
-      height: 100%;
-  }
-  
-  .main-wrap {
-      position: relative;
-      height: 100%;
-      background-image: url('img/mainB.jpg');
-      background-position: top;
-      background-repeat: no-repeat;
-      background-size: cover;
-  }
-  
-  .main-wrap .main-top {
-      height: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-  }
-  
-  .main-wrap .main-top .menu-bars {
-      margin-left: 32px;
-      width: 32px;
-      height: 32px;
-      transition: 350ms;
-      background-image: url('img/iconmonstr-menu-1-32.png');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-  }
-  
-  .main-wrap .main-top span {
-      margin-right: 32px;
-      color: #fff;
-      font-size: 24px;
-      font-weight: bold;
-  
-  }
-  
-  .main-wrap .main-mid {
-      margin-top: 200px;
-      padding-left: 50%;
-  }
-  
-  .main-wrap .menu-bars-close {
-      margin-top: 34px;
-      margin-left: 12%;
-      width: 32px;
-      height: 32px;
-      background-image: url('img/iconmonstr-x-mark-2-32.png');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-  }
-  
+        margin: 0;
+        height: 100%;
+    }
+
+    .main-wrap {
+        background-color: #DEDEDE;
+        height: 100%;
+    }
+
+    .main-wrap .main-top {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main-wrap .main-top .menu-bars {
+        margin-left: 32px;
+        width: 32px;
+        height: 32px;
+        transition: 350ms;
+        background-image: url('img/iconmonstr-menu-1-32.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .main-wrap .main-top span {
+        margin-right: 32px;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .main-wrap .main-mid-widget .row{
+        margin: 50px 0 0 13%;
+    }
+
+    .main-wrap .main-mid-widget table {
+        width: 570px;
+        height: 250px;
+        margin-left: 3%;
+        margin-bottom: 3%;
+        background-color: white;
+        opacity: 0.95;
+        border-radius: 10px;
+    }
+
+    .main-wrap .main-mid-widget table h2{
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .main-wrap .menu-bars-close {
+        margin-top: 34px;
+        margin-left: 12%;
+        width: 32px;
+        height: 32px;
+        background-image: url('img/iconmonstr-x-mark-2-32.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
     .nav-menu {
-      background-color: #060b26;
-      width: 250px;
-      height:100vh;
-      display:flex;
-      position:fixed;
-      top: 0;
-      left:-100%;
-      transition: 850ms;
+        background-color: #060b26;
+        width: 250px;
+        height:100vh;
+        display:flex;
+        position:fixed;
+        top: 0;
+        left:-100%;
+        transition: 850ms;
     }
     .nav-menu.active {
-      left: 0;
-      transition: 350ms;
+        left: 0;
+        transition: 350ms;
     }
-  
+
     #root ul {
         margin-top: 30%;
         margin-left: -10%;
@@ -85,6 +94,4 @@
     ul :link{
         text-decoration: none;
     }
-
-   
-  }
+}

@@ -8,14 +8,6 @@
       .main-wrap-tboard {
           background-color: #DEDEDE;
           height: 100%;
-        /*
-         position: relative;
-         height: 100%;
-         background-image: linear-gradient( rgba(55, 117, 200, 0.6), rgba(55, 117, 200, 0.6) ),url('img/green.jpg');
-         background-position: top;
-         background-repeat: no-repeat;
-         background-size: cover;
-        */
         }
       
       .main-wrap-tboard .main-top {
@@ -117,10 +109,14 @@
             margin-left: 60px;
             height: 100px;
             border-radius: 7px;
-             box-shadow: 0 4px 4px 1px darkgray;
+            box-shadow: 0 4px 4px 1px darkgray;
         }
 
         .main-mid .container .row .col-sm :link{
+            text-decoration: none;
+        }
+
+        .main-wrap-tboard .main-top :link{
             text-decoration: none;
         }
 

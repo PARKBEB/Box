@@ -9,7 +9,8 @@ function Tboard() {
   return (
     <div className="main-wrap-tboard">
         <div className="main-top">
-            <div className= "menu-bars" onClick= {showSidebar}></div>       
+            <div className= "menu-bars" onClick= {showSidebar}></div> 
+            <Link to= "/Main"><span>SANHA INFORMATION TECHNOLOGY</span></Link>      
         </div>
         <nav className= {sidebar ? 'nav-menu active' : 'nav-menu'}>
         <div className= "menu-bars-close" onClick= {showSidebar}></div>
@@ -21,12 +22,10 @@ function Tboard() {
         </ul>
         </nav>
         <div className= "main-mid-code">
-            <div className= "row">
-                <div className= "col-md-5">
+            <div className= "row">    
+                <div class= "col-md-5"></div>
+                <div class= "col-md-5"></div>
                 </div>
-                <div className= "col-md-5">
-                </div>
-            </div>
         </div>
         <div className= "btn-code">
             <button className= "btn-code-name" id= "back">이전</button>

@@ -11,7 +11,7 @@ function Tboard() {
     <div className="main-wrap-tboard">
         <div className="main-top">
             <div className= "menu-bars" onClick= {showSidebar}></div>       
-            <span>SANHA INFORMATION TECHNOLOGY</span>
+            <Link to= "/Main"><span>SANHA INFORMATION TECHNOLOGY</span></Link>
         </div>
         <nav className= {sidebar ? 'nav-menu active' : 'nav-menu'}>
         <div className= "menu-bars-close" onClick= {showSidebar}></div>
