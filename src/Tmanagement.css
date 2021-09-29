@@ -4,15 +4,6 @@
             height: 100%;
       }
       
-      .main-wrap-tboard {
-            position: relative;
-            height: 100%;
-            background-image: linear-gradient( rgba(55, 117, 200, 0.6), rgba(55, 117, 200, 0.6) ),url('img/green.jpg');
-            background-position: top;
-            background-repeat: no-repeat;
-            background-size: cover;
-      }
-      
       .main-wrap-tboard .main-top {
             height: 100px;
             display: flex;
