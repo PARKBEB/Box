@@ -1,8 +1,10 @@
-import axios from 'axios';
 import './App.css';
+import axios from 'axios';
 import React, {useState} from 'react';
 
 function App() {
+  const [user, setUser] = useState([]);
+
   const [inputs, setInputs] = useState({
       id: "",
       name: "",
@@ -18,12 +20,17 @@ function App() {
         [name]: value,
       });
     };
-
+    
+  
   function get(){
     const url= "/users/get";
 
     axios.get(url).then(function(response) {
-      console.log("성공");
+      if(response.data) {
+        setUser(response.data[0]);
+        console.log(response);
+        console.log("성공");
+      }
   })
     .catch(function(error) {
       console.log("실패");
@@ -31,7 +38,6 @@ function App() {
   }
 
   function post() {
-
     const url= "/users/post";
 
     axios.post(url, null, {
@@ -52,15 +58,15 @@ function App() {
     return (
     <div className="App">
         <header className="App-header">
-            ID: {id}   &nbsp;&nbsp;&nbsp;&nbsp; NAME: {name} &nbsp;&nbsp;&nbsp;&nbsp; TEAM: {team} 
+            ID: {user.id} &nbsp;&nbsp;&nbsp; NAME: {user.name} &nbsp;&nbsp;&nbsp; TEAM: {user.team}
             <h1 className="App-title">
-                <input type= "text" className= "login-input-text"  name= "id"   onChange= {onChange}  placeholder= "id"></input>
-                <input type= "text" className= "login-input-text"  name= "name" onChange= {onChange}  placeholder= "name"></input>
-                <input type= "text" className= "login-input-text"  name= "team" onChange= {onChange}  placeholder= "team"></input>
+                <input type= "text" className= "login-input-text"  name= "id"     onChange= {onChange}  placeholder= "id"></input>
+                <input type= "text" className= "login-input-text"  name= "name"   onChange= {onChange}  placeholder= "name"></input>
+                <input type= "text" className= "login-input-text"  name= "team"   onChange= {onChange}  placeholder= "team"></input>
             </h1>
-                <button onClick= {get}> GET </button>
+                <button onClick= {get}>  GET  </button>
                 <button onClick= {post}> POST </button>
-                <button onClick= {post}> PUT </button>
+                <button onClick= {post}> PUT  </button>
                 <button onClick= {post}> DELETE </button>
         </header>
     </div>
