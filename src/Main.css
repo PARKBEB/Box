@@ -5,8 +5,12 @@
     }
 
     .main-wrap {
-        background-color: #DEDEDE;
+        position: relative;
         height: 100%;
+        background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url('img/sea.jpg');
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .main-wrap .main-top {
