@@ -44,8 +44,6 @@ public class InfoController {
 
             Reader reader = new FileReader("C:/test/sample.json");
 
-            //JSONObject jsonObject = (JSONObject) parser.parse(reader);
-           // String str = jsonObject.toString();
             JSONArray jArray = (JSONArray)new JSONParser().parse(reader);
 
             JSONObject inner = new JSONObject();
