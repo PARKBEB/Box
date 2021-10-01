@@ -9,6 +9,7 @@ function App() {
   return (
     <BrowserRouter>
         <Switch>
+            
           <Route path = "/" exact={true}  component={Login}/>
           <Route path = "/Main"  component={Main}/>
           <Route path = "/Tboard"  component={Tboard}/>
