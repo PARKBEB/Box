@@ -21,133 +21,63 @@ function Main() {
         <li>평가관리</li>
       </ul>
     </nav>
-    <div className= "main-mid-widget">
-      <div className= "row">
-        <table class="table">
-          <thead>
-            <h2>강의관리</h2>
-            <tr>
-              <th scope="col">이름</th>
-              <th scope="col">분기</th>
-              <th scope="col">제출상태</th>
-              <th scope="col">제출일시</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </table>
-        <table class="table">
-          <thead>
-            <h2>시험관리</h2>
-            <tr>
-              <th scope="col">이름</th>
-              <th scope="col">분기</th>
-              <th scope="col">제출상태</th>
-              <th scope="col">제출일시</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </table>
-        <table class="table">
-          <thead>
-            <h2>과제관리</h2>
-            <tr>
-              <th scope="col">이름</th>
-              <th scope="col">분기</th>
-              <th scope="col">제출상태</th>
-              <th scope="col">제출일시</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </table>
-        <table class="table">
-          <thead>
-            <h2>평가관리</h2>
-            <tr>
-              <th scope="col">이름</th>
-              <th scope="col">분기</th>
-              <th scope="col">제출상태</th>
-              <th scope="col">제출일시</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </table>
+    <div className="main-mid">
+
+      <div className="banners">
+        <div className="banner">강의 관리</div>
+        <div className="banner">시험 관리</div>
+        <div className="banner">과제 관리</div>
+        <div className="banner">평가 관리</div>
       </div>
+
+      <div className="mid-content">
+        <div className="mid-content-title"><a>강의 관리 →</a></div>
+        <table>
+          <tr>
+            <th>이름</th>
+            <th>분기</th>
+            <th>제출</th>
+            <th>날짜</th>
+          </tr>
+          <tr>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+            <td>a</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+
+        <div className="mid-content-arrows">
+          <span>◀</span>
+          <div>Page 1 of 1</div>
+          <span>▶</span>
+        </div>
+      </div>
+
     </div>
   </div>
   );
