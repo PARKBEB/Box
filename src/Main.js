@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 function Main() {
   const [sidebar, setSidebar] = useState(false);
-  console.log(sidebar);
   const showSidebar = () => setSidebar(!sidebar);
   return (
   <div className="main-wrap">

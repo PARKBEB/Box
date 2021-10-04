@@ -21,7 +21,7 @@ function Tboard() {
             <li>평가관리</li>
         </ul>
         </nav>
-        <div className= "main-mid">
+        <div className= "main-mid-Tboard">
             <div className="container">
                 <div className="row">
                     <div className="col-md">
