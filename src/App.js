@@ -1,14 +1,13 @@
 import './App.css';
 import axios from 'axios';
 import React, {useState} from 'react';
-import { unstable_renderSubtreeIntoContainer } from 'react-dom/cjs/react-dom.development';
 
 function App() {
   const [user, setUser] = useState([]);
   const [inputs, setInputs] = useState({
       id: "",
       name: "",
-      team: ""
+      team: "",
     });
 
   const { id, name, team } = inputs;
@@ -20,16 +19,22 @@ function App() {
         [name]: value,
       });
     };
-    
-  
+
+    const userlist = user.map((list) => (
+      <li key= {list.id}>
+        ID : {list.id} \ NAME : {list.name} \ TEAM :{list.team}
+      </li>
+    ));
+
   function get(){
     const url= "/users/get";
 
     axios.get(url).then(function(response){
-      if(response) {
-        for(var i= 0; i < 1; i++){  
-          setUser(response.data[i]);
-        }
+      if(response) {  
+        const templist = response.data.slice();
+        setUser(templist); 
+
+       console.log("성공");
       }
   })
     .catch(function(error) {
@@ -73,7 +78,7 @@ function App() {
     return (
     <div className="App">
         <header className="App-header">
-            ID: {user.id} &nbsp;&nbsp;&nbsp; NAME: {user.name} &nbsp;&nbsp;&nbsp; TEAM: {user.team}
+              <ul>{userlist}</ul>
             <h1 className="App-title">
                 <input type= "text" className= "login-input-text"  name= "id"     onChange= {onChange}  placeholder= "id"></input>
                 <input type= "text" className= "login-input-text"  name= "name"   onChange= {onChange}  placeholder= "name"></input>

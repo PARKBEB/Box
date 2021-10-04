@@ -34,3 +34,8 @@ button{
   color: #aaa;
   font-size: 17px;
 }
+
+ul{
+  list-style: none;
+  text-align: left;
+}
