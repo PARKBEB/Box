@@ -1,14 +1,14 @@
 import './App.css';
 import axios from 'axios';
 import React, {useState} from 'react';
+import { unstable_renderSubtreeIntoContainer } from 'react-dom/cjs/react-dom.development';
 
 function App() {
   const [user, setUser] = useState([]);
-
   const [inputs, setInputs] = useState({
       id: "",
       name: "",
-      team: "",
+      team: ""
     });
 
   const { id, name, team } = inputs;
@@ -25,18 +25,17 @@ function App() {
   function get(){
     const url= "/users/get";
 
-    axios.get(url).then(function(response) {
-      if(response.data) {
-        setUser(response.data[0]);
-        console.log(response);
-        console.log("성공");
+    axios.get(url).then(function(response){
+      if(response) {
+        for(var i= 0; i < 1; i++){  
+          setUser(response.data[i]);
+        }
       }
   })
     .catch(function(error) {
       console.log("실패");
     }) 
   }
-
   function post() {
     const url= "/users/post";
 
@@ -55,6 +54,22 @@ function App() {
         })   
     }
 
+    function del() {
+      const url= "/users/delete";
+  
+      axios.delete(url, {
+          params : {    
+              id: id
+            }
+          })
+          .then(function(response) {
+              console.log("성공");
+          })
+          .catch(function(error) {
+              console.log("실패");
+          })   
+      }
+
     return (
     <div className="App">
         <header className="App-header">
@@ -67,7 +82,7 @@ function App() {
                 <button onClick= {get}>  GET  </button>
                 <button onClick= {post}> POST </button>
                 <button onClick= {post}> PUT  </button>
-                <button onClick= {post}> DELETE </button>
+                <button onClick= {del}> DELETE </button>
         </header>
     </div>
     )
