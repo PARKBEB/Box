@@ -1,93 +1,135 @@
 package com.reactbackend.info;
 
 import java.io.File;
-
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
-import java.util.ArrayList;
-import java.util.Map;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject; // JSON객체 생성
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class InfoController { 
+public class InfoController {
 
-    ArrayList<Map<String, String>> list = new ArrayList<Map<String, String>>(); 
+	@ResponseBody
+	@GetMapping("/users/get")
+	public JSONArray userGet() throws IOException, ParseException {
 
-    @ResponseBody
-    @GetMapping("/users/get")
-    public ArrayList<Map<String, String>> userGet(){        
+		Reader reader = new FileReader("C:/test/sample.json");
 
-        System.out.println(list);
+		JSONArray jArray = (JSONArray) new JSONParser().parse(reader);
 
-        return list;
-    }   
+		return jArray;
+	}
 
-    @PostMapping("/users/post")
-    public ArrayList<Map<String, String>> userPost(String id, String name, String team) throws IOException, ParseException {
+	@PostMapping("/users/post")
+	public JSONArray userPost(String id, String name, String team) throws IOException, ParseException {
 
-        File f = new File("C:/test/sample.json");
+		File f = new File("C:/test/sample.json");
 
-        JSONParser parser = new JSONParser();
+		Reader reader = new FileReader("C:/test/sample.json");
 
-        if (f.exists()) {            
-            System.out.println("있음");
+		JSONArray jArray = (JSONArray) new JSONParser().parse(reader);
 
-            Reader reader = new FileReader("C:/test/sample.json");
+		if (f.exists()) {
+			System.out.println("있음");
 
-            JSONArray jArray = (JSONArray)new JSONParser().parse(reader);
+			JSONObject inner = new JSONObject();
+			inner.put("id", id);
+			inner.put("name", name);
+			inner.put("team", team);
 
-            JSONObject inner = new JSONObject();
-            inner.put("id", id);
-            inner.put("name", name);
-            inner.put("team", team);
+			jArray.add(inner);
 
-            jArray.add(inner);
+			FileWriter file = new FileWriter("C:/test/sample.json");
 
-            FileWriter file = new FileWriter("C:/test/sample.json"); 
+			file.write(jArray.toJSONString());
+			file.flush();
+			file.close();
 
-            file.write(jArray.toJSONString());
-            file.flush();
-            file.close();
-            
-        } else {
+			System.out.print(jArray);
 
-            System.out.println("없음");
+		} else {
 
-            try {                 
-                JSONArray jArray = new JSONArray();
+			System.out.println("없음");
 
-                JSONObject inner = new JSONObject();
-                inner.put("id", id);
-                inner.put("name", name);
-                inner.put("team", team);
+			try {
 
-                jArray.add(inner);
+				JSONObject inner = new JSONObject();
+				inner.put("id", id);
+				inner.put("name", name);
+				inner.put("team", team);
 
-                FileWriter file = new FileWriter("C:/test/sample.json"); 
+				jArray.add(inner);
 
-                file.write(jArray.toJSONString());
-                file.flush();
-                file.close();
-            }
-            catch (IOException e) {
-                e.printStackTrace(); 
-            }
-        }
+				FileWriter file = new FileWriter("C:/test/sample.json");
 
-        System.out.print("아이디=" +id + "이름=" +name + "팀=" +team);
+				file.write(jArray.toJSONString());
+				file.flush();
+				file.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 
-        return list;
+		return jArray;
 
-    }
+	}
+
+	@DeleteMapping("/users/delete")
+	public JSONArray userDelete(String id) throws IOException, ParseException {
+
+		Reader reader = new FileReader("C:/test/sample.json");
+
+		JSONArray jArray = (JSONArray) new JSONParser().parse(reader);
+
+		for (int i = 0; i < jArray.size(); i++) {
+			JSONObject obj = (JSONObject) jArray.get(i);
+			if (id.equals(obj.get("id"))) {
+				jArray.remove(i);
+			}
+		}
+		FileWriter file = new FileWriter("C:/test/sample.json");
+
+		file.write(jArray.toJSONString());
+		file.flush();
+		file.close();
+
+		return jArray;
+	}
+	
+	@PutMapping("/users/put")
+	public JSONArray userPut(String id, String name, String team) throws IOException, ParseException {
+		
+		Reader reader = new FileReader("C:/test/sample.json");
+
+		JSONArray jArray = (JSONArray) new JSONParser().parse(reader);
+
+		for (int i = 0; i < jArray.size(); i++) {
+			JSONObject obj = (JSONObject) jArray.get(i);
+			if (id.equals(obj.get("id"))) {
+				obj.put("name", name);
+				obj.put("team", team);
+			}
+		}
+		
+		FileWriter file = new FileWriter("C:/test/sample.json");
+
+		file.write(jArray.toJSONString());
+		file.flush();
+		file.close();
+
+		return jArray;
+
+	}
 
 }
