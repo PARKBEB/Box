@@ -1,9 +1,4 @@
 @media (prefers-reduced-motion: no-preference) {
-    html, body {
-        margin: 0;
-        height: 100%;
-    }
-
     .main-wrap-tboard .main-top {
         height: 100px;
         display: flex;
@@ -37,34 +32,6 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-    }
-
-    .nav-menu {
-        background-color: #060b26;
-        width: 250px;
-        height:100vh;
-        display:flex;
-        position:fixed;
-        top: 0;
-        left:-100%;
-        transition: 850ms;
-    }
-
-    .nav-menu.active {
-        left: 0;
-        transition: 350ms;
-    }
-
-    #root ul {
-        margin-top: 30%;
-        margin-left: -10%;
-        font-size: 22px;
-    }
-
-    #root li {
-        margin-top: 50%;
-        display: flex;
-        color: #fff;
     }
 
     .main-mid-code .row{
