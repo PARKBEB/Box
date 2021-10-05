@@ -75,6 +75,24 @@ function App() {
           })   
       }
 
+      function put() {
+        const url= "/users/put";
+    
+        axios.put(url, {
+            params : {    
+                id: id,
+                name: name,
+                team: team
+              }
+            })
+            .then(function(response) {
+                console.log("성공");
+            })
+            .catch(function(error) {
+                console.log("실패");
+            })   
+        }
+
     return (
     <div className="App">
         <header className="App-header">
@@ -86,7 +104,7 @@ function App() {
             </h1>
                 <button onClick= {get}>  GET  </button>
                 <button onClick= {post}> POST </button>
-                <button onClick= {post}> PUT  </button>
+                <button onClick= {put}> PUT  </button>
                 <button onClick= {del}> DELETE </button>
         </header>
     </div>
