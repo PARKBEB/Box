@@ -4,6 +4,7 @@ import React, {useState} from 'react';
 
 function App() {
   const [user, setUser] = useState([]);
+  
   const [inputs, setInputs] = useState({
       id: "",
       name: "",
@@ -26,38 +27,28 @@ function App() {
       </li>
     ));
 
-  function get(){
-    const url= "/users/get";
+    function get(){
+      const url= "/users/get";
 
-    axios.get(url).then(function(response){
-      if(response) {  
-        const templist = response.data.slice();
-        setUser(templist); 
-
-       console.log("성공");
-      }
-  })
-    .catch(function(error) {
-      console.log("실패");
-    }) 
-  }
-  function post() {
-    const url= "/users/post";
-
-    axios.post(url, null, {
-        params : {    
-            id:   id, 
-            name: name,
-            team: team
-          }
-        })
-        .then(function(response) {
-            console.log("성공");
-        })
-        .catch(function(error) {
-            console.log("실패");
-        })   
+      axios.get(url).then(function(response){
+        if(response) {  
+          const templist = response.data.slice();
+          setUser(templist); 
+        }
+      })
     }
+    
+    function post() {
+      const url= "/users/post";
+
+      axios.post(url, null, {
+          params : {    
+              id:   id, 
+              name: name,
+              team: team
+            }
+          })
+      }
 
     function del() {
       const url= "/users/delete";
@@ -67,31 +58,19 @@ function App() {
               id: id
             }
           })
-          .then(function(response) {
-              console.log("성공");
-          })
-          .catch(function(error) {
-              console.log("실패");
-          })   
       }
 
-      function put() {
-        const url= "/users/put";
-    
-        axios.put(url, {
-            params : {    
-                id: id,
-                name: name,
-                team: team
-              }
-            })
-            .then(function(response) {
-                console.log("성공");
-            })
-            .catch(function(error) {
-                console.log("실패");
-            })   
-        }
+    function put() {
+      const url= "/users/put";
+  
+      axios.put(url, null,{
+          params : {    
+              id: id,
+              name: name,
+              team: team
+            }
+          })
+      }
 
     return (
     <div className="App">
@@ -110,5 +89,6 @@ function App() {
     </div>
     )
 }
+
 export default App;
 
