@@ -1,5 +1,6 @@
 .wrapper{
-    display: flex;      /* 기본은 row */       
+    display: flex; 
+    flex-direction: row;       
     justify-content: space-around;  /* main axis 가로 방향 이동 */
     align-items: center;  /* cross axis  세로 방향 이동 */
     height: 100vh;
