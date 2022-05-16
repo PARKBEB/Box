@@ -1,10 +1,13 @@
-body{
-    display: flex;
+.wrapper{
+    display: flex;      /* 기본은 row */       
+    justify-content: space-around;  /* main axis 가로 방향 이동 */
+    align-items: center;  /* cross axis  세로 방향 이동 */
+    height: 100vh;
 }
 
 .box{
     background: pink;
     color: purple;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
 }
