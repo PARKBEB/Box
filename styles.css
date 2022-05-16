@@ -1,0 +1,10 @@
+body{
+    display: flex;
+}
+
+.box{
+    background: pink;
+    color: purple;
+    width: 100px;
+    height: 100px;
+}
