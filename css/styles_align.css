@@ -1,6 +1,6 @@
 .father{
     display: flex;  
-    flex-direction: row;    
+    flex-direction: column;    
     justify-content: space-around;  
     height: 100vh; /* height가 없으면 작동하지 않음 */
 }

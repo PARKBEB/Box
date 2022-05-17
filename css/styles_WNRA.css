@@ -1,0 +1,22 @@
+.father{
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+    flex-wrap: wrap-reverse;  
+    align-content: space-around; /* 라인관련 */
+    /* flex-direction: row-reverse; 박스 순서 반대로 */
+    /* flex-wrap: wrap;  박스가 줄지 않게 해줌  flex-wrap: nowrap; 박스 사이즈 상태 상관없이 한 줄에 모든 상자가 있음 */
+}
+
+.child{
+    display: flex;
+    background: hotpink;
+    color: white;
+    width: 200px;
+    height: 200px;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+
