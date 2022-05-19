@@ -1,0 +1,17 @@
+.father{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.child{
+    flex-basis: 30%;       
+    display: flex;
+    background: hotpink;
+    color: white;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
