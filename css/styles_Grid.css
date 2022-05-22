@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../css/styles_col.css" />
-        <title>Grid</title>
-    </head>
-    <body>
-        <div class="wrapper"> 
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-        </div>
-    </body>
-</html>
+.father{           /* grid design은 father에서 진행해야함 */
+    display: grid;    
+    grid-template-columns: 250px 250px 250px 250px;
+    column-gap: 10px;   /* column간의 차 */
+    row-gap: 10px;      /* gap: 10px */
+   
+}
+
+.child{
+    background: skyblue;
+    color: blue;
+    font-size: 50px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
