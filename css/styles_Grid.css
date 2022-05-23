@@ -1,6 +1,7 @@
 .father{           /* grid design은 father에서 진행해야함 */
     display: grid;    
     grid-template-columns: 250px 250px 250px 250px;
+    grid-template-rows: 100px 50px 300px;
     column-gap: 10px;   /* column간의 차 */
     row-gap: 10px;      /* gap: 10px */
    
