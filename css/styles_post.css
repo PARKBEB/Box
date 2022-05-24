@@ -1,0 +1,79 @@
+.grandfather{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.father{
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  height: 600px;
+  flex-wrap: wrap;
+  background: #fff;
+  box-shadow: 5px 5px 10px lightgray;
+}
+
+.child{
+  width: 200px;
+  height: 70px;
+  font-size: 60px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.child:nth-child(2){
+  font-size: 30px;
+}
+
+.baby{
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.box{
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+}
+
+.box:nth-child(1){
+  background: skyblue;
+}
+
+.box:nth-child(2){
+  background: skyblue;
+}
+
+.box:nth-child(3){
+  background: skyblue;
+}
+
+.box:nth-child(4){
+  background: gray;
+}
+
+.box:nth-child(5){
+  background: gray;
+}
+
+.box:nth-child(6){
+  background: gray;
+}
+
+.box:nth-child(7){
+  background: green;
+}
+
+.box:nth-child(8){
+  background: green;
+}
+
+.box:nth-child(9){
+  background: green;
+}
