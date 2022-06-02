@@ -1,27 +1,35 @@
 /* flex는 열만 갖고, grid는 열과 행 둘 다 가지고 있다. */
 .grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; /* 1 fraction 사용가능한 공간*/
-    grid-template-rows: repeat(4, 100px); 
-    gap: 10px;
+    height: 50vh;
+    /*
+    grid-template-columns: repeat(4, 1fr);  1 fraction grid에서 사용가능한 공간
+    grid-template-rows: repeat(4, 1fr);
+    */
+    grid-template: 
+    [header-start] "header header header header" 1fr [header-end]  /* 높이 / 가로 */
+    [content-start] "content content content nav" 2fr [content-end] 
+    [footer-start] "footer footer footer footer" 1fr [footer-end] / 1fr 1fr 1fr 1fr 
+    ; 
+    gap: 5px;
 }
 
 .header{
     background-color: red;
-    
+    grid-area: header;
 }
 
 .content{
     background-color: orange;
-    
+    grid-area: content;
 }
 
 .nav{
     background-color: yellow;
-    
+    grid-area: nav;
 }
 
 .footer{
     background-color: green;
-    
+    grid-area: footer;
 }
