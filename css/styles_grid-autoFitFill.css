@@ -1,0 +1,23 @@
+.grid{
+    color: white;
+    display: grid;
+    gap: 5px;
+    grid-auto-rows: 100px;
+    margin-bottom: 30px;
+}
+
+.item:nth-child(odd){
+    background-color: skyblue;
+}
+
+.item:nth-child(even){
+    background-color: greenyellow;
+}
+
+.grid:first-child{  /* 정한 범위 내에서 최대한 많은 column 생성 (컬럼에 값이 없어도 공간 생성)*/
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.grid:last-child{ /* row에 맞게 꽉 채움 */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+} 
