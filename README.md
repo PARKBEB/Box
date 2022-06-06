@@ -11,7 +11,7 @@
 - flex-shrink
 - flex-basis
 
-## gird
+## grid
 - grid-template-columns
 - grid-template-rows
 - grid-column-gap
@@ -34,3 +34,11 @@
 - grid-row
 - justify-self
 - align-self
+
+## SCSS
+- Variables
+- Nesting
+- Partials
+- Mixins
+- Extend
+- Reponsive Mixins
