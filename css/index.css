@@ -49,8 +49,20 @@ body{
 }
 
 .profile{
-    background-color: blanchedalmond;
+    display: grid;
+    justify-items: center;
     grid-area: profile;
+}
+
+.proImg{
+    width: 50%;
+    height: 125%;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.proImg::file-selector-button{
+    display: none;
 }
 
 .dDay{

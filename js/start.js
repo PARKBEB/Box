@@ -26,3 +26,8 @@ if(savedUsername === null){
 } else {
     paintGreetings(savedUsername);
 }
+
+function send(){
+    console.log("test");
+    location.href="index.html";
+}
