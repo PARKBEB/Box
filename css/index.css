@@ -19,18 +19,18 @@ body{
 
 .grid{
     display: grid;
-    gap: 10px;
+    gap: 30px;
     height: 640px;
     grid-template:
-    "big_Dday weather" 5%
-    "username profile" 5%
-    "toDay toDay" 5%
-    "dDay dDay" 5%
-    "planned planned" 5%
-    "personal personal" 5%
-    "location location" 5% / 30% 30% 80% 80% 80% 80%
+    "big_Dday weather" 9%
+    "username profile" 9%
+    "dDay dDay" 12%
+    "planned planned" 12%
+    "personal personal" 12%
+    "location location" 12% / 40% 40%
     ;
     align-content: center;
+    justify-content: center;
 }
 
 .big_Dday{
@@ -46,11 +46,6 @@ body{
 .username{
     background-color: yellow;
     grid-area: username;
-}
-
-.toDay{
-    background-color: antiquewhite;
-    grid-area: toDay;
 }
 
 .profile{
