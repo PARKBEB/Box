@@ -3,7 +3,7 @@ const loginInput = document.querySelector("#login-form Input");
 const greeting = document.querySelector("#greeting");
 
 const HIDDEN_CLASSNAME = "hidden";
-const USERNAME_KEY = "username;"
+const USERNAME_KEY = "username"
 
 function onLoginSubmit(even){
     even.preventDefault();
@@ -11,7 +11,7 @@ function onLoginSubmit(even){
     const username = loginInput.value;
     localStorage.setItem(USERNAME_KEY, username);
     paintGreetings(username);
-    send(username);
+    send();
 }
 
 function paintGreetings(username){
@@ -19,7 +19,7 @@ function paintGreetings(username){
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
-let savedUsername = localStorage.getItem(USERNAME_KEY);
+const savedUsername = localStorage.getItem(USERNAME_KEY);
 
 if(savedUsername === null){
     loginForm.classList.remove(HIDDEN_CLASSNAME); 
@@ -28,7 +28,6 @@ if(savedUsername === null){
     paintGreetings(savedUsername);
 }
 
-function send(username){
-    console.log(username);
-    location.href="index.html?username="+savedUsername;
+function send(){
+    location.href="index.html";
 }
