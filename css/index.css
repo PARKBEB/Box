@@ -58,11 +58,18 @@ body{
     width: 50%;
     height: 125%;
     border-radius: 50%;
-    background-color: red;
+    background-color: white;
+    color: white;
 }
 
 #inputImage::file-selector-button{
     display: none;
+}
+
+#uploadImage{
+    width: 50%;
+    height: 125%;
+    border-radius: 50%;
 }
 
 .dDay{
@@ -83,4 +90,8 @@ body{
 .location{
     background-color: pink;
     grid-area: location;
+}
+
+.hidden{
+    display: none;
 }
