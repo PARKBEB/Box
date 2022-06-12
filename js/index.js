@@ -13,7 +13,7 @@ $(document).ready(function(){
     $('#inputImage').change(function(){
         let selectFile = document.querySelector("#inputImage").files[0];
         const file = URL.createObjectURL(selectFile);
-        document.querySelector("#uploadImg").src = file;
+        document.querySelector("#uploadImage").src = file;
         inputImg.classList.add(HIDDEN_CLASSNAME);
         uploadImg.classList.remove(HIDDEN_CLASSNAME);
     });
