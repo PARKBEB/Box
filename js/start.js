@@ -11,6 +11,7 @@ function onLoginSubmit(even){
     const username = loginInput.value;
     localStorage.setItem(USERNAME_KEY, username);
     paintGreetings(username);
+    send(username);
 }
 
 function paintGreetings(username){
@@ -18,7 +19,7 @@ function paintGreetings(username){
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
-const savedUsername = localStorage.getItem(USERNAME_KEY);
+let savedUsername = localStorage.getItem(USERNAME_KEY);
 
 if(savedUsername === null){
     loginForm.classList.remove(HIDDEN_CLASSNAME); 
@@ -27,7 +28,7 @@ if(savedUsername === null){
     paintGreetings(savedUsername);
 }
 
-function send(){
-    console.log("test");
-    location.href="index.html";
+function send(username){
+    console.log(username);
+    location.href="index.html?username="+savedUsername;
 }
