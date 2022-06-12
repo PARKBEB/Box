@@ -54,14 +54,14 @@ body{
     grid-area: profile;
 }
 
-.proImg{
+#inputImage{
     width: 50%;
     height: 125%;
     border-radius: 50%;
     background-color: red;
 }
 
-.proImg::file-selector-button{
+#inputImage::file-selector-button{
     display: none;
 }
 
