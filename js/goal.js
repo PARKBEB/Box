@@ -29,5 +29,5 @@ if(savedGoal === null){
 }
 
 function send(){
-    location.href="index.html";
+    location.href="dDay.html";
 }
