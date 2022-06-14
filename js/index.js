@@ -5,6 +5,7 @@ const toDay = document.querySelector(".toDay");
 const savedGoal = document.querySelector(".goal");
 const saveddDay = document.querySelector(".D-DAY");
 const bigdDay = document.querySelector(".big_Dday");
+const weatherContainer = document.querySelector(".weather");
 
 const USERNAME_KEY = "username";
 const username = localStorage.getItem(USERNAME_KEY);
@@ -46,3 +47,20 @@ $(document).ready(function(){
   function dDayPage(){
     location.href="dDay.html";
   }
+
+  /* weather */
+  const API_KEY = "32a8b4a317ec9abc25b94cf9189e3567";
+function onGeoOk(position){
+  const lat = position.coords.latitude;
+  const log = position.coords.longitude;
+  console.log("You live it", lat, log);
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${log}&appid=${API_KEY}&units=metric`;
+  fetch(url).then(response => response.json()).then(data => { 
+    weatherContainer.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+  })
+}
+function onGeoOkError(){
+  alert("Can't find you. No weather for you.");
+}
+  navigator.geolocation.getCurrentPosition(onGeoOk, onGeoOkError);
+  
