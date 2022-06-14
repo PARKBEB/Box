@@ -17,8 +17,8 @@ const HIDDEN_CLASSNAME = "hidden";
 
 savedName.innerText = "Hellow!"+" "+username;
 savedGoal.innerText = goal;
-saveddDay.innerText = dDay;
-bigdDay.innerText = dDay;
+saveddDay.innerText = "D-"+dDay;
+bigdDay.innerText = "D-"+dDay;
 
 /* toDay */
 let now = new Date();
@@ -44,5 +44,5 @@ $(document).ready(function(){
   }
 
   function dDayPage(){
-    location.href="index.html";
+    location.href="dDay.html";
   }

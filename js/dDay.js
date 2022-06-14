@@ -19,7 +19,7 @@ function dDaySubmit(even){
 }
 
 function paintGreetings(dDay){
-    greeting.innerText = dDay;
+    greeting.innerText = "D-"+dDay;
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 

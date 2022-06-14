@@ -50,13 +50,13 @@ body{
 
 .profile{
     display: grid;
-    justify-items: center;
+    justify-items: end;
     grid-area: profile;
 }
 
 #inputImage{
-    width: 50%;
-    height: 125%;
+    width: 55%;
+    height: 140%;
     border-radius: 50%;
     background-color: white;
     color: white;
@@ -67,8 +67,8 @@ body{
 }
 
 #uploadImage{
-    width: 50%;
-    height: 125%;
+    width: 55%;
+    height: 140%;
     border-radius: 50%;
 }
 
