@@ -6,6 +6,7 @@ const savedGoal = document.querySelector(".goal");
 const saveddDay = document.querySelector(".D-DAY");
 const bigdDay = document.querySelector(".big_Dday");
 const weatherContainer = document.querySelector(".weather");
+const mainD = document.querySelector("#dDay");
 
 const USERNAME_KEY = "username";
 const username = localStorage.getItem(USERNAME_KEY);
@@ -18,8 +19,6 @@ const HIDDEN_CLASSNAME = "hidden";
 
 savedName.innerText = "Hellow!"+" "+username;
 savedGoal.innerText = goal;
-saveddDay.innerText = "D-"+dDay;
-bigdDay.innerText = "D-"+dDay;
 
 /* toDay */
 let now = new Date();
@@ -45,7 +44,19 @@ $(document).ready(function(){
   }
 
   function dDayPage(){
-    location.href="dDay.html";
+    if(dDay === null){
+      location.href="goal.html";
+    }else{
+      location.href="dDay.html";
+    }
+  }
+
+  if(dDay === null){
+    saveddDay.innerText = "D-DAY";
+    bigdDay.innerText = "D-DAY";
+  }else{
+    saveddDay.innerText = "D-"+dDay;
+    bigdDay.innerText = "D-"+dDay;
   }
 
   /* weather */
