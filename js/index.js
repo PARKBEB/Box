@@ -14,6 +14,7 @@ const GOAL_KEY = "goal";
 const goal = localStorage.getItem(GOAL_KEY);
 const DDAY_KEY = "dDay";
 const dDay = localStorage.getItem(DDAY_KEY);
+const PROIMG_KEY = "profileImg";
 
 const HIDDEN_CLASSNAME = "hidden";
 
@@ -33,6 +34,7 @@ $(document).ready(function(){
         let selectFile = document.querySelector("#inputImage").files[0];
         const file = URL.createObjectURL(selectFile);
         document.querySelector("#uploadImage").src = file;
+        localStorage.setItem(PROIMG_KEY, file);
         inputImg.classList.add(HIDDEN_CLASSNAME);
         uploadImg.classList.remove(HIDDEN_CLASSNAME);
     });
