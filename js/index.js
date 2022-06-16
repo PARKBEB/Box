@@ -1,6 +1,7 @@
 const savedName = document.querySelector(".savedName");
 const inputImg = document.querySelector("#inputImage");
-const uploadImg = document.querySelector("#uploadImage");
+let uploadImg = document.querySelector("#uploadImage");
+const uploadsrc = document.querySelector("#uploadImage").src;
 const toDay = document.querySelector(".toDay");
 const savedGoal = document.querySelector(".goal");
 const saveddDay = document.querySelector(".D-DAY");
@@ -17,7 +18,6 @@ const dDay = localStorage.getItem(DDAY_KEY);
 const PROIMG_KEY = "profileImg";
 
 const HIDDEN_CLASSNAME = "hidden";
-
 savedName.innerText = "Hellow!"+" "+username;
 savedGoal.innerText = goal;
 
@@ -30,6 +30,9 @@ toDay.innerText = "Today is"+" "+ day;
 
 /* profile */ 
 $(document).ready(function(){
+    const store = localStorage.getItem(PROIMG_KEY);
+    if(store != null) loadImage(store);
+
     $('#inputImage').change(function(){
         let selectFile = document.querySelector("#inputImage").files[0];
         const file = URL.createObjectURL(selectFile);
@@ -40,10 +43,20 @@ $(document).ready(function(){
     });
   });
 
+  function loadImage(store){
+  
+    console.log(uploadImg.src);
+
+    uploadImg.setAttribute("src",store);
+    console.log(uploadImg.src);
+  }
+
   /* goal */
   function goalPage(){
     location.href="goal.html";
   }
+
+
 
   function dDayPage(){
     if(dDay === null){
