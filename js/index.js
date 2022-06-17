@@ -44,11 +44,9 @@ $(document).ready(function(){
   });
 
   function loadImage(store){
-  
-    console.log(uploadImg.src);
-
     uploadImg.setAttribute("src",store);
-    console.log(uploadImg.src);
+    inputImg.classList.add(HIDDEN_CLASSNAME);
+    uploadImg.classList.remove(HIDDEN_CLASSNAME);
   }
 
   /* goal */
