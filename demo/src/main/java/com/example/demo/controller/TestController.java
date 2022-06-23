@@ -13,9 +13,14 @@ import com.example.demo.vo.TestVo;
 
 @Controller
 public class TestController {
-	@RequestMapping(value = "/home")
+	@RequestMapping(value = "/start")
 	public String home() {
-		return "start.html";
+		return "start";
+	}
+	
+	@RequestMapping(value = "/index")
+	public String index() {
+		return "index";
 	}
 	
 	@RequestMapping(value = "/valueTest", method = RequestMethod.GET)

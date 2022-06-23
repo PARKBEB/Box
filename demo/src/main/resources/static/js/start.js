@@ -29,5 +29,5 @@ if(savedUsername === null){
 }
 
 function send(){
-    location.href="index.html";
+    location.href="index";
 }
