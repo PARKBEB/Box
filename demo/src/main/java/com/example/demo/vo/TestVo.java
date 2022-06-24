@@ -2,7 +2,7 @@ package com.example.demo.vo;
 
 public class TestVo {
     private String id;
-    private String name;
+    private String	name;
 
     public String getId() {
         return id;
