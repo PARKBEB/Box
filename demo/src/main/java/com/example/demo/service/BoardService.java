@@ -18,4 +18,19 @@ public class BoardService {
     	return mapper.list();
     }
 
+    public void insert(BoardVo vo) {
+    	mapper.insert(vo);
     }
+    
+    public BoardVo detail(int no) {
+    	return mapper.detail(no);
+    }
+    
+    public void update(BoardVo vo) {
+    	mapper.update(vo);
+    }
+    
+    public void delete(String no) {
+    	mapper.delete(no);
+    }
+}

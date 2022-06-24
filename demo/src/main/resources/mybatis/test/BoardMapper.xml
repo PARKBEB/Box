@@ -6,6 +6,28 @@
 			no, id, name, rank, date, time 
 		from board
 	</select>
+	
+	<insert id="insert">
+		insert into board (id,name,rank,date,time)
+				values (#{id},#{name},#{rank},NOW(),NOW())
+	</insert>
+	
+	<select id="detail" resultType="BoardVo">
+		select 
+			no, id, name, rank, date, time
+		from board where no = #{no}
+	</select>
+	
+	<update id="update">
+		update board
+		set name = #{name}, rank = #{rank}, id = #{id}, time = NOW(), date = NOW()
+		where no = #{no}
+	</update>
+	
+	<delete id="delete">
+		delete from board 
+		where no = #{no}
+	</delete>
 </mapper>
 
 

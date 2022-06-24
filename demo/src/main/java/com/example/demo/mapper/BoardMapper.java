@@ -11,4 +11,8 @@ import com.example.demo.vo.BoardVo;
 @Mapper
 public interface BoardMapper {
    List<BoardVo> list();
+   void insert(BoardVo vo);
+   BoardVo detail(int no);
+   void update(BoardVo vo);
+   void delete(String no);
 }
