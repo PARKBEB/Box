@@ -1,2 +1,6 @@
 demo/** linguist-documentation=false
 demo/** linguist-vendored=false
+
+* linguist-vendored
+*.java linguist-vendored=false
+*.javascript linguist-vendored=false
