@@ -1,4 +1,4 @@
 demo/** linguist-documentation=false
 demo/** linguist-vendored=false
 
-*.shell linguist-detectable=false
+*.Shell linguist-detectable=false
