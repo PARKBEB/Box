@@ -10,6 +10,8 @@ public class BoardVo {
     private String	rank;
     private Date	date;
     private Time time;
+    private int hit;
+    
 	public int getNo() {
 		return no;
 	}
@@ -46,8 +48,10 @@ public class BoardVo {
 	public void setTime(Time time) {
 		this.time = time;
 	}
-    
-    
-
-   
+	public int getHit() {
+		return hit;
+	}
+	public void setHit(int hit) {
+		this.hit = hit;
+	}
 }

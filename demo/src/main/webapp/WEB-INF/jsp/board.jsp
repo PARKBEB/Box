@@ -59,6 +59,8 @@
 				});
 			}
 		}
+		
+		
 	</script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Board list</title>
@@ -66,6 +68,16 @@
 <body>
     <form name="userForm">
     <h1>List page</h1>
+    	<div id="searchForm">
+			<select name="type">
+				<option selected value="">CHOICE</option>
+				<option value="id">ID</option>
+				<option value="name">NAME</option>
+				<option value="rank">RANK</option>
+			</select>
+			<input type="text" name="keyword" value=""></input>
+			<input type="button" onclick="getSearchList()" value="search"></input>
+		</div>
 	    <table>
 	    	<thead>
 	    		<tr>
@@ -74,6 +86,7 @@
 	    			<th scope="col">ID</th>
 	    			<th scope="col">NAME</th>
 	    			<th scope="col">RANK</th>
+	    			<th scope="col">HIT</th>
 	    			<th scope="col">INDATE</th>
 	    			<th scope="col">INTIME</th>
 	    		</tr>
@@ -86,6 +99,7 @@
 	    			<td class="text_ct">${list.id}&nbsp;</td>
 	    			<td class="text_ct"><a href= "${path}/detail?no=${list.no}">${list.name}&nbsp;</a></td>
 	    			<td class="text_ct">${list.rank}&nbsp;</td>
+	    			<td class="text_ct">${list.hit}&nbsp;</td>
 	    			<td class="text_ct"><fmt:formatDate value="${list.date}" type="date" pattern="yyyy/MM/dd" /></td>
 	    			<td class="text_ct"><fmt:formatDate value="${list.time}" type="time" pattern="HH:mm:ss" /></td>						
 	    		</tr>

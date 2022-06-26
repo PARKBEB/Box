@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.io.Console;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -39,6 +40,8 @@ public class BoardController {
 	@RequestMapping(value = "/detail", method = RequestMethod.GET)
 	public String getDtail(Model model, int no){
 		BoardVo data = service.detail(no);
+		service.updateHit(no);
+		System.out.print("은지은지2");
 		model.addAttribute("data", data);
 		return "detail";
 	}
@@ -71,4 +74,5 @@ public class BoardController {
 		}
 		return "redirect:board";
 	}
+	
 }

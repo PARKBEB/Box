@@ -23,7 +23,7 @@
 			<td>name</td><td>${data.name}</td>
 		</tr>
 		<tr>
-			<td>rank</td><td>${data.rank}</td>
+			<td>rank</td><td>${data.rank}</td>	
 		</tr>
 		<tr>
 			<td>id</td><td>${data.id}</td>

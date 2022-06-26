@@ -33,4 +33,8 @@ public class BoardService {
     public void delete(String no) {
     	mapper.delete(no);
     }
+    
+    public void updateHit(int no) {
+    	mapper.updateHit(no);
+    }
 }

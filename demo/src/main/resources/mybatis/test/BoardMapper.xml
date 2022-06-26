@@ -3,13 +3,13 @@
 <mapper namespace="com.example.demo.mapper.BoardMapper">
 	<select id="list" resultType="BoardVo">
 		select 
-			no, id, name, rank, date, time 
+			no, id, name, rank, hit, date, time 
 		from board
 	</select>
 	
 	<insert id="insert">
-		insert into board (id,name,rank,date,time)
-				values (#{id},#{name},#{rank},NOW(),NOW())
+		insert into board (id,name,rank,hit,date,time)
+				values (#{id},#{name},#{rank},#{hit},NOW(),NOW())
 	</insert>
 	
 	<select id="detail" resultType="BoardVo">
@@ -28,6 +28,13 @@
 		delete from board 
 		where no = #{no}
 	</delete>
+	
+	<update id="updateHit" >
+		update board
+		set hit = hit+1
+		where no = #{no}
+	</update>
+	
 </mapper>
 
 
