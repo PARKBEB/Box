@@ -35,9 +35,23 @@
 		where no = #{no}
 	</update>
 	
-	<select id="search">
-		select * from board 
-		where id like %{keyword}% or name like %{keyword}% or rank like %{keyword}%
+	<select id="search" resultType="BoardVo">
+		select no, id, name, rank, hit, date, time, rownum  
+		from board
+		<choose>
+		<when test="type == 'id'.toString()">
+			(id like '%'||#{keyword}||'%')
+		</when>
+		<when test="type == 'name'.toString()">
+			(name like '%'||#{keyword}||'%')
+		</when>
+		<when test="type == 'rank'.toString()">
+			(rank like '%'||#{keyword}||'%') 
+		</when>
+		<otherwise>
+			(id like '%'||#{keyword}||'%' OR name like '%'||#{keyword}||'%')
+		</otherwise>
+		</choose>
 	</select>
 </mapper>
 

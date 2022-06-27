@@ -4,14 +4,16 @@ import java.sql.Time;
 import java.util.Date;
 
 public class BoardVo {
-    private int no;
+    private int     no;
     private String	id;
     private String	name;
     private String	rank;
     private Date	date;
-    private Time time;
-    private int hit;
-    private int rownum;
+    private Time    time;
+    private int     hit;
+    private int     rownum;
+    private String  type;
+    private String  keyword;
     
 	public int getNo() {
 		return no;
@@ -60,5 +62,17 @@ public class BoardVo {
 	}
 	public void setRownum(int rownum) {
 		this.rownum = rownum;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public String getKeyword() {
+		return keyword;
+	}
+	public void setKeyword(String keyword) {
+		this.keyword = keyword;
 	}
 }

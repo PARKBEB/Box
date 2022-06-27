@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-import java.io.Console;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -10,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
 
 import com.example.demo.service.BoardService;
 import com.example.demo.vo.BoardVo;
@@ -73,5 +73,11 @@ public class BoardController {
 		}
 		return "redirect:board";
 	}
-	
+
+	@RequestMapping(value = "/search", method = RequestMethod.GET)
+	public String search(Model model){
+		List<BoardVo> searchList = service.search();
+		model.addAttribute("searchList", searchList);
+		return "search";
+	}	
 }

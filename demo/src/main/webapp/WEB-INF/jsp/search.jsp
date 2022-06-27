@@ -59,13 +59,16 @@
 				});
 			}
 		}
+		function search(){
+			var url ="search";
+		}
 	</script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Board list</title>
+<title>Search list</title>
 </head>
 <body>
     <h1>List page</h1>
-    <form name="searchForm" action="search" autocomplete="off">
+    <form name="searchForm" autocomplete="off">
     	<select name="type">
     		<option selected value="">---</option>
     		<option value="all">all</option>
@@ -74,7 +77,7 @@
     		<option value="rank">rank</option>
     	</select>
     	<input type="text" name="keyword" value=""></input>
-    	<button>search</button>
+    	<input type="button" onclick="search()" value="search">
     </form>
 	<form name="userForm">
 	    <table>

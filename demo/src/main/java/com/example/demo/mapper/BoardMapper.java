@@ -16,4 +16,5 @@ public interface BoardMapper {
    void update(BoardVo vo);
    void delete(String no);
    void updateHit(int no);
+   List<BoardVo> search();
 }

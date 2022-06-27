@@ -37,4 +37,8 @@ public class BoardService {
     public void updateHit(int no) {
     	mapper.updateHit(no);
     }
+    
+    public List<BoardVo> search(){
+    	return mapper.search();
+    }
 }
