@@ -31,5 +31,6 @@
 	</table>
 		<a href="update?no=${data.no}" role="button" class="btn btn-outline-info">modify</a>
 		<a href="delete?no=${data.no}" role="button" class="btn btn-outline-info">delete</a>
+		<a href= "board">home</a>
 </body>
 </html>

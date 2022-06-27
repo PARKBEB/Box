@@ -41,7 +41,6 @@ public class BoardController {
 	public String getDtail(Model model, int no){
 		BoardVo data = service.detail(no);
 		service.updateHit(no);
-		System.out.print("은지은지2");
 		model.addAttribute("data", data);
 		return "detail";
 	}
