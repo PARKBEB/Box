@@ -66,18 +66,8 @@
 <title>Board list</title>
 </head>
 <body>
-    <form name="userForm">
     <h1>List page</h1>
-    	<div id="searchForm">
-			<select name="type">
-				<option selected value="">CHOICE</option>
-				<option value="id">ID</option>
-				<option value="name">NAME</option>
-				<option value="rank">RANK</option>
-			</select>
-			<input type="text" name="keyword" value=""></input>
-			<input type="button" onclick="getSearchList()" value="search"></input>
-		</div>
+	<form name="userForm">
 	    <table>
 	    	<thead>
 	    		<tr>
@@ -95,7 +85,7 @@
 	    		<c:forEach items="${list}" var="list">
 	    		<tr>
 	    			<td class="text_ct"><input name="RowCheck" type="checkbox" value="${list.no}"</td>
-	    			<td class="text_ct">${list.no}&nbsp;</td>
+	    			<td class="text_ct">${list.rownum}&nbsp;</td>
 	    			<td class="text_ct">${list.id}&nbsp;</td>
 	    			<td class="text_ct"><a href= "${path}/detail?no=${list.no}">${list.name}&nbsp;</a></td>
 	    			<td class="text_ct">${list.rank}&nbsp;</td>

@@ -11,6 +11,7 @@ public class BoardVo {
     private Date	date;
     private Time time;
     private int hit;
+    private int rownum;
     
 	public int getNo() {
 		return no;
@@ -53,5 +54,11 @@ public class BoardVo {
 	}
 	public void setHit(int hit) {
 		this.hit = hit;
+	}
+	public int getRownum() {
+		return rownum;
+	}
+	public void setRownum(int rownum) {
+		this.rownum = rownum;
 	}
 }
