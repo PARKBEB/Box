@@ -107,6 +107,7 @@
 	    </table>
     	<a href="<c:url value="insert" />" role="button" class="btn btn-outline-info">write</a>
     	<input type="button" value="Del" onClick="deleteValue();">
+    	<a href= "board">home</a>
     </form>
 </body>
 </html>
