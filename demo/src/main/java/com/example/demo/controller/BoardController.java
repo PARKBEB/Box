@@ -80,4 +80,10 @@ public class BoardController {
 		model.addAttribute("searchList", searchList);
 		return "search";
 	}	
+	
+	@RequestMapping(value = "/commentWrite", method = RequestMethod.POST)
+	public String commentWrite(String content) throws Exception{
+		service.commentWrite(content);
+		return "redirect:board";
+	}
 }

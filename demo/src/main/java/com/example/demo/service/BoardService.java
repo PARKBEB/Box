@@ -41,4 +41,8 @@ public class BoardService {
     public List<BoardVo> search(String type,String keyword){
     	return mapper.search(type, keyword);
     }
+    
+    public void commentWrite(String content) {
+    	mapper.commentWrite(content);
+    }
 }

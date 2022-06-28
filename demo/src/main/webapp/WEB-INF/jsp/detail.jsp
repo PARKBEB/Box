@@ -32,5 +32,14 @@
 		<a href="update?no=${data.no}" role="button" class="btn btn-outline-info">modify</a>
 		<a href="delete?no=${data.no}" role="button" class="btn btn-outline-info">delete</a>
 		<a href= "board">home</a>
+	<!-- Comment -->
+		<h2>Leave a Comment</h2>
+		<form name="commentForm" action="commentWrite" method="post" autocomplete="off">
+			<div>
+				
+				<textarea name="content" rows="3"></textarea>
+			</div>
+			<button type="submit">save</button>
+		</form>
 </body>
 </html>

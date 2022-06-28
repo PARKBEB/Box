@@ -75,4 +75,5 @@ public class BoardVo {
 	public void setKeyword(String keyword) {
 		this.keyword = keyword;
 	}
+	
 }
