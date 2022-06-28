@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.demo.service.BoardService;
 import com.example.demo.vo.BoardVo;
+import com.example.demo.vo.CommentVo;
 
 @Controller
 public class BoardController {
@@ -40,6 +41,8 @@ public class BoardController {
 	public String getDtail(Model model, int no){
 		BoardVo data = service.detail(no);
 		service.updateHit(no);
+		List<CommentVo> commentList = service.getCommentList(no);
+		model.addAttribute("commentList", commentList);
 		model.addAttribute("data", data);
 		return "detail";
 	}

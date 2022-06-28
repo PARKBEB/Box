@@ -41,5 +41,12 @@
 				<textarea name="content" rows="3"></textarea>
 			<button type="submit">save</button>
 		</form>
+		<c:forEach items="${commentList}" var="commentList">
+			<div>${commentList.no}</div>
+			<div>${commentList.writer}</div>
+			<div>${commentList.date}</div>
+			<div>${commentList.content}</div>
+		</c:forEach>
+		
 </body>
 </html>

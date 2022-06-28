@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.vo.BoardVo;
+import com.example.demo.vo.CommentVo;
 
 @Repository
 @Mapper
@@ -18,4 +19,5 @@ public interface BoardMapper {
    void updateHit(int no);
    List<BoardVo> search(String type,String keyword);
    void commentWrite(int no, String content);
+   List<CommentVo> getCommentList(int no);
 }

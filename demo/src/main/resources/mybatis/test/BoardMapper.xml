@@ -60,6 +60,12 @@
 		(no, writer, date, content)
 		values (#{no}, 1, NOW(), #{content})
 	</insert>
+	
+	<select id="getCommentList" resultType="CommentVo">
+		select no,writer,date, content 
+		from comment 
+		where no= #{no}
+	</select>
 </mapper>
 
 

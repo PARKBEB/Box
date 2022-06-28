@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.mapper.BoardMapper;
 import com.example.demo.vo.BoardVo;
+import com.example.demo.vo.CommentVo;
 
 @Service
 public class BoardService {
@@ -44,5 +45,9 @@ public class BoardService {
     
     public void commentWrite(int no, String content) {
     	mapper.commentWrite(no, content);
+    }
+    
+    public List<CommentVo> getCommentList(int no){
+    	return mapper.getCommentList(no);
     }
 }

@@ -91,7 +91,7 @@
 	    		</tr>
 	    	</thead>
 	    	<tbody>
-	    		<c:forEach items="${searchList }" var="searchList">
+	    		<c:forEach items="${searchList}" var="searchList">
 	    		<tr>
 	    			<td class="text_ct"><input name="RowCheck" type="checkbox" value="${searchList.no}"</td>
 	    			<td class="text_ct">${searchList.rownum}&nbsp;</td>
