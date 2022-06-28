@@ -8,13 +8,13 @@
 	</select>
 	
 	<insert id="insert">
-		insert into board (id,name,rank,hit,date,time)
-				values (#{id},#{name},#{rank},#{hit},NOW(),NOW())
+		insert into board (id,name,rank,password,hit,date,time)
+				values (#{id},#{name},#{rank},#{password},#{hit},NOW(),NOW())
 	</insert>
 	
 	<select id="detail" resultType="BoardVo">
 		select 
-			no, id, name, rank, date, time
+			no, id, name, rank, date, time, password
 		from board where no = #{no}
 	</select>
 	

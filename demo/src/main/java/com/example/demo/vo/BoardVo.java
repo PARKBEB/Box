@@ -11,6 +11,7 @@ public class BoardVo {
     private Date	date;
     private Time    time;
     private int     hit;
+    private String password;
     private int     rownum;
     private String  type;
     private String  keyword;
@@ -74,6 +75,12 @@ public class BoardVo {
 	}
 	public void setKeyword(String keyword) {
 		this.keyword = keyword;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 }

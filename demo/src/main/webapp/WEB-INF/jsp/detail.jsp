@@ -4,6 +4,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script>
+	function password(){
+		var count = 0;
+		var pass = prompt('please write password');
+		
+		while(count <= 1){
+			if(pass == "${data.password}"){
+				alert("성공");
+				location.href="delete?no=${data.no}";
+				break;
+			}else count+=1
+			
+			var pass = prompt('no password');
+		}
+		if(count == 2){
+			alert("실패");
+		}
+	}
+</script>
 <meta charset="EUC-KR">
 <title>Detail</title>
 </head>
@@ -30,7 +49,9 @@
 		</tr>
 	</table>
 		<a href="update?no=${data.no}" role="button" class="btn btn-outline-info">modify</a>
-		<a href="delete?no=${data.no}" role="button" class="btn btn-outline-info">delete</a>
+		<!--<a href="delete?no=${data.no}" role="button" class="btn btn-outline-info">delete</a>
+		-->
+		<input type="button" onclick="password()" name="del" value="삭제"></input>
 		<a href= "board">home</a>
 	<!-- Comment -->
 		<h2>Leave a Comment</h2>

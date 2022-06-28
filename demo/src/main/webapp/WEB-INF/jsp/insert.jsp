@@ -29,6 +29,10 @@
 			<label>RANK</label>
 			<input type="text" class="form-control" name="rank" placeholder="Please write RANK">
 		</div>
+		<div class="form-group">
+			<label>PASSWORD</label>
+			<input type="text" class="form-control" name="password" placeholder="Please write PASSWORD">
+		</div>
 		<button type="submit" class="btn btn-outline-info">save</button>
 		<button type="button" class="btn btn-outline-info"><a href="board">back</a></button>	
 	</form>
