@@ -73,7 +73,7 @@
     		<option value="name">name</option>
     		<option value="rank">rank</option>
     	</select>
-    	<input type="text" name="keyword" value=""></input>
+    	<input type="text" name="keyword"></input>
     	<button>search</button>
     </form>
 	<form name="userForm">

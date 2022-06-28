@@ -75,8 +75,8 @@ public class BoardController {
 	}
 
 	@RequestMapping(value = "/search", method = RequestMethod.GET)
-	public String search(Model model){
-		List<BoardVo> searchList = service.search();
+	public String search(String type, String keyword, Model model){
+		List<BoardVo> searchList = service.search(type, keyword);
 		model.addAttribute("searchList", searchList);
 		return "search";
 	}	

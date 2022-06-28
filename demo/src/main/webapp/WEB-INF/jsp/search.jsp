@@ -59,16 +59,13 @@
 				});
 			}
 		}
-		function search(){
-			var url ="search";
-		}
 	</script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Search list</title>
+<title>Board list</title>
 </head>
 <body>
-    <h1>List page</h1>
-    <form name="searchForm" autocomplete="off">
+    <h1>Search page</h1>
+    <form name="searchForm" action="search" autocomplete="off">
     	<select name="type">
     		<option selected value="">---</option>
     		<option value="all">all</option>
@@ -76,8 +73,8 @@
     		<option value="name">name</option>
     		<option value="rank">rank</option>
     	</select>
-    	<input type="text" name="keyword" value=""></input>
-    	<input type="button" onclick="search()" value="search">
+    	<input type="text" name="keyword"></input>
+    	<button>search</button>
     </form>
 	<form name="userForm">
 	    <table>
@@ -94,16 +91,16 @@
 	    		</tr>
 	    	</thead>
 	    	<tbody>
-	    		<c:forEach items="${list}" var="list">
+	    		<c:forEach items="${searchList }" var="searchList">
 	    		<tr>
-	    			<td class="text_ct"><input name="RowCheck" type="checkbox" value="${list.no}"</td>
-	    			<td class="text_ct">${list.rownum}&nbsp;</td>
-	    			<td class="text_ct">${list.id}&nbsp;</td>
-	    			<td class="text_ct"><a href= "${path}/detail?no=${list.no}">${list.name}&nbsp;</a></td>
-	    			<td class="text_ct">${list.rank}&nbsp;</td>
-	    			<td class="text_ct">${list.hit}&nbsp;</td>
-	    			<td class="text_ct"><fmt:formatDate value="${list.date}" type="date" pattern="yyyy/MM/dd" /></td>
-	    			<td class="text_ct"><fmt:formatDate value="${list.time}" type="time" pattern="HH:mm:ss" /></td>						
+	    			<td class="text_ct"><input name="RowCheck" type="checkbox" value="${searchList.no}"</td>
+	    			<td class="text_ct">${searchList.rownum}&nbsp;</td>
+	    			<td class="text_ct">${searchList.id}&nbsp;</td>
+	    			<td class="text_ct"><a href= "${path}/detail?no=${searchList.no}">${searchList.name}&nbsp;</a></td>
+	    			<td class="text_ct">${searchList.rank}&nbsp;</td>
+	    			<td class="text_ct">${searchList.hit}&nbsp;</td>
+	    			<td class="text_ct"><fmt:formatDate value="${searchList.date}" type="date" pattern="yyyy/MM/dd" /></td>
+	    			<td class="text_ct"><fmt:formatDate value="${searchList.time}" type="time" pattern="HH:mm:ss" /></td>						
 	    		</tr>
 	    		</c:forEach>
 	    	</tbody>

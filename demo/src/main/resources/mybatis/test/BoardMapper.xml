@@ -35,23 +35,24 @@
 		where no = #{no}
 	</update>
 	
-	<select id="search" resultType="BoardVo">
-		select no, id, name, rank, hit, date, time, rownum  
-		from board
+	<select id="search" parameterType="String" resultType="BoardVo">
+		select no, id, name, rank, hit, date, time, @ROWNUM := @ROWNUM + 1 AS rownum 
+		from board, (select @rownum:=0) temp
+		where 
 		<choose>
 		<when test="type == 'id'.toString()">
-			(id like '%'||#{keyword}||'%')
+			(id like CONCAT('%',#{keyword},'%'))
 		</when>
-		<when test="type == 'name'.toString()">
-			(name like '%'||#{keyword}||'%')
+		  <when test="type == 'name'.toString()">
+			(name like CONCAT('%',#{keyword},'%'))
 		</when>
 		<when test="type == 'rank'.toString()">
-			(rank like '%'||#{keyword}||'%') 
+			(rank like CONCAT('%',#{keyword},'%'))
 		</when>
 		<otherwise>
-			(id like '%'||#{keyword}||'%' OR name like '%'||#{keyword}||'%')
+			(id like CONCAT('%',#{keyword},'%') OR name like CONCAT('%',#{keyword},'%') OR rank like CONCAT('%',#{keyword},'%'))
 		</otherwise>
-		</choose>
+		</choose> 
 	</select>
 </mapper>
 

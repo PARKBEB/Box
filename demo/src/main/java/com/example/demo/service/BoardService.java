@@ -38,7 +38,7 @@ public class BoardService {
     	mapper.updateHit(no);
     }
     
-    public List<BoardVo> search(){
-    	return mapper.search();
+    public List<BoardVo> search(String type,String keyword){
+    	return mapper.search(type, keyword);
     }
 }
