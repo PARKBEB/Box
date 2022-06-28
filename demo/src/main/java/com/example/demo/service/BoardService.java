@@ -42,7 +42,7 @@ public class BoardService {
     	return mapper.search(type, keyword);
     }
     
-    public void commentWrite(String content) {
-    	mapper.commentWrite(content);
+    public void commentWrite(int no, String content) {
+    	mapper.commentWrite(no, content);
     }
 }

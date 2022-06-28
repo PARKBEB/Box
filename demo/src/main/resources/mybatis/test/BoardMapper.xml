@@ -58,7 +58,7 @@
 	<insert id="commentWrite">
 		insert into comment 
 		(no, writer, date, content)
-		values (1, 1, NOW(), #{content})
+		values (#{no}, 1, NOW(), #{content})
 	</insert>
 </mapper>
 

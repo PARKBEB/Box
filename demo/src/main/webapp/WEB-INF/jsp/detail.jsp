@@ -35,10 +35,10 @@
 	<!-- Comment -->
 		<h2>Leave a Comment</h2>
 		<form name="commentForm" action="commentWrite" method="post" autocomplete="off">
-			<div>
-				
-				<textarea name="content" rows="3"></textarea>
+			<div class="reply" style="display:none;">
+				<input type="number" name="no" value="${data.no}" />
 			</div>
+				<textarea name="content" rows="3"></textarea>
 			<button type="submit">save</button>
 		</form>
 </body>

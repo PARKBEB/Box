@@ -17,5 +17,5 @@ public interface BoardMapper {
    void delete(String no);
    void updateHit(int no);
    List<BoardVo> search(String type,String keyword);
-   void commentWrite(String content);
+   void commentWrite(int no, String content);
 }

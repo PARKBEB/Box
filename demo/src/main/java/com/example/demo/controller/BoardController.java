@@ -10,7 +10,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-
 import com.example.demo.service.BoardService;
 import com.example.demo.vo.BoardVo;
 
@@ -82,8 +81,9 @@ public class BoardController {
 	}	
 	
 	@RequestMapping(value = "/commentWrite", method = RequestMethod.POST)
-	public String commentWrite(String content) throws Exception{
-		service.commentWrite(content);
-		return "redirect:board";
+	public String commentWrite(int no, String content) throws Exception{
+		service.commentWrite(no, content);
+		String url="redirect:detail?no="+Integer.toString(no);
+		return url;
 	}
 }
