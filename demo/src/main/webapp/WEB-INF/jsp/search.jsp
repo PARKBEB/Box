@@ -72,6 +72,7 @@
     		<option value="id">id</option>
     		<option value="name">name</option>
     		<option value="rank">rank</option>
+    		<option value="title">title</option>
     	</select>
     	<input type="text" name="keyword"></input>
     	<button>search</button>
@@ -85,6 +86,7 @@
 	    			<th scope="col">ID</th>
 	    			<th scope="col">NAME</th>
 	    			<th scope="col">RANK</th>
+	    			<th scope="col">TITLE</th>
 	    			<th scope="col">HIT</th>
 	    			<th scope="col">INDATE</th>
 	    			<th scope="col">INTIME</th>
@@ -98,6 +100,7 @@
 	    			<td class="text_ct">${searchList.id}&nbsp;</td>
 	    			<td class="text_ct"><a href= "${path}/detail?no=${searchList.no}">${searchList.name}&nbsp;</a></td>
 	    			<td class="text_ct">${searchList.rank}&nbsp;</td>
+	    			<td class="text_ct">${searchList.title}&nbsp;</td>
 	    			<td class="text_ct">${searchList.hit}&nbsp;</td>
 	    			<td class="text_ct"><fmt:formatDate value="${searchList.date}" type="date" pattern="yyyy/MM/dd" /></td>
 	    			<td class="text_ct"><fmt:formatDate value="${searchList.time}" type="time" pattern="HH:mm:ss" /></td>						

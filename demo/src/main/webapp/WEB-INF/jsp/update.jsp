@@ -18,6 +18,10 @@
 		<div><input name="id" value="${data.id}" type="text" /></div>
 		<div>rank</div>
 		<div><input name="rank" value="${data.rank}" type="text" /></div>
+		<div>title</div>
+		<div><input name="title" value="${data.title}" type="text" /></div>
+		<div>content</div>
+		<div><input name="content" value="${data.content}" type="text" /></div>
 		<div>indate</div>
 		<div><fmt:formatDate value="${data.date}" pattern="yyyy-MM-dd" /></div>
 		<div>intime :  </div>

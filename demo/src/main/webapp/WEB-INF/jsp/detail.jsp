@@ -11,7 +11,7 @@
 		
 		while(count <= 1){
 			if(pass == "${data.password}"){
-				alert("성공");
+				alert("delete");
 				location.href="delete?no=${data.no}";
 				break;
 			}else count+=1
@@ -19,7 +19,7 @@
 			var pass = prompt('no password');
 		}
 		if(count == 2){
-			alert("실패");
+			alert("delete fail");
 		}
 	}
 </script>
@@ -43,6 +43,12 @@
 		</tr>
 		<tr>
 			<td>rank</td><td>${data.rank}</td>	
+		</tr>
+		<tr>
+			<td>title</td><td>${data.title}</td>	
+		</tr>
+		<tr>
+			<td>content</td><td>${data.content}</td>	
 		</tr>
 		<tr>
 			<td>id</td><td>${data.id}</td>

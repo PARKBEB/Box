@@ -30,6 +30,14 @@
 			<input type="text" class="form-control" name="rank" placeholder="Please write RANK">
 		</div>
 		<div class="form-group">
+			<label>TITLE</label>
+			<input type="text" class="form-control" name="title" placeholder="Please write TITLE">
+		</div>
+		<div class="form-group">
+			<label>CONTENT</label>
+			<input type="text" class="form-control" name="content" placeholder="Please write CONTENT">
+		</div>
+		<div class="form-group">
 			<label>PASSWORD</label>
 			<input type="text" class="form-control" name="password" placeholder="Please write PASSWORD">
 		</div>
