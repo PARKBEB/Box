@@ -5,65 +5,14 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+<link rel="stylesheet" type="text/css" href="../../../../../css/board.css">
 <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script type="text/javascript">
-	$(function(){
-		var chkObj = document.getElementsByName("RowCheck");
-		var rowCnt = chkObj.length;
-		
-		$("input[name='allCheck']").click(function(){
-			var chk_listArr = $("input[name='RowCheck']");
-			for(var i=0; i < chk_listArr.length; i++){
-				chk_listArr[i].checked = this.checked;
-			}
-		});
-		$("input[name='RowCheck']").click(function(){
-			if($("input[name='RowCheck']:checked").length == rowCnt){
-				$("input[name='allCheck']")[0].checked = true;
-			}
-			else{
-				$("input[name='allCheck']")[0].checked = false;
-			}
-		});
-	});
-	function deleteValue(){
-		var url ="delete";
-		var valueArr = new Array();
-		var list = $("input[name='RowCheck']");
-		for(var i = 0; i < list.length; i++){
-			if(list[i].checked){
-				valueArr.push(list[i].value);
-			}
-		}
-		if(valueArr.length == 0){
-			alert("선택된 글이 없습니다");
-		}
-		else{
-			var chk = confirm("정말 삭제하시겠습니까?");
-			$.ajax({
-				url : url,
-				type : 'POST',
-				traditional : true,
-				data : {
-					valueArr : valueArr
-				},
-				success : function(jdata){
-					if(jdata = 1){
-						alert("삭제성공");
-						location.replace("board");
-					}
-					else{
-						alert("삭제실패");
-					}
-				}
-			});
-		}
-	}
-</script>
+<script src="../../../../../js/board.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Board list</title>
 </head>
 <body>
+<div class="wrapper">
     <h1>List page</h1>
     <form name="searchForm" action="search" autocomplete="off">
     	<select name="type">
@@ -77,6 +26,8 @@
     	<input type="text" name="keyword"></input>
     	<button>search</button>
     </form>
+    <a href="<c:url value="insert" />" role="button" class="btn btn-outline-info">write</a>
+    <input type="button" value="Del" onClick="deleteValue();">
 	<form name="userForm">
 	    <table>
 	    	<thead>
@@ -94,7 +45,7 @@
 	    	</thead>
 	    	<tbody>
 	    		<c:forEach items="${list}" var="list">
-	    		<tr>
+	    		<tr class="trT">
 	    			<td class="text_ct"><input name="RowCheck" type="checkbox" value="${list.no}"</td>
 	    			<td class="text_ct">${list.rownum}&nbsp;</td>
 	    			<td class="text_ct">${list.id}&nbsp;</td>
@@ -108,8 +59,7 @@
 	    		</c:forEach>
 	    	</tbody>
 	    </table>
-    	<a href="<c:url value="insert" />" role="button" class="btn btn-outline-info">write</a>
-    	<input type="button" value="Del" onClick="deleteValue();">
     </form>
+</div>
 </body>
 </html>
