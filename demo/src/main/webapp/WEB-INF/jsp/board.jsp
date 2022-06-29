@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../../../../../css/board.css">
 <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="../../../../../js/board.js"></script>
@@ -13,8 +14,8 @@
 </head>
 <body>
 <div class="wrapper">
-    <h1>List page</h1>
-    <form name="searchForm" action="search" autocomplete="off">
+    <h1>List</h1>
+    <form name="searchForm" action="search" autocomplete="off" class="searchF">
     	<select name="type">
     		<option selected value="">---</option>
     		<option value="all">all</option>
@@ -24,11 +25,11 @@
     		<option value="title">title</option>
     	</select>
     	<input type="text" name="keyword"></input>
-    	<button>search</button>
+    	<button class="btn">search</button>
+    	<a href="<c:url value="insert" />" role="button" class="btn">write</a>
+    	<input type="button" value="delete" onClick="deleteValue();" class="btn" />
     </form>
-    <a href="<c:url value="insert" />" role="button" class="btn btn-outline-info">write</a>
-    <input type="button" value="Del" onClick="deleteValue();">
-	<form name="userForm">
+	<form name="userForm" class="userF">
 	    <table>
 	    	<thead>
 	    		<tr>
@@ -46,15 +47,15 @@
 	    	<tbody>
 	    		<c:forEach items="${list}" var="list">
 	    		<tr class="trT">
-	    			<td class="text_ct"><input name="RowCheck" type="checkbox" value="${list.no}"</td>
-	    			<td class="text_ct">${list.rownum}&nbsp;</td>
-	    			<td class="text_ct">${list.id}&nbsp;</td>
-	    			<td class="text_ct"><a href= "${path}/detail?no=${list.no}">${list.name}&nbsp;</a></td>
-	    			<td class="text_ct">${list.rank}&nbsp;</td>
-	    			<td class="text_ct">${list.title}&nbsp;</td>
-	    			<td class="text_ct">${list.hit}&nbsp;</td>
-	    			<td class="text_ct"><fmt:formatDate value="${list.date}" type="date" pattern="yyyy/MM/dd" /></td>
-	    			<td class="text_ct"><fmt:formatDate value="${list.time}" type="time" pattern="HH:mm:ss" /></td>						
+	    			<td><input name="RowCheck" type="checkbox" value="${list.no}"</td>
+	    			<td>${list.rownum}&nbsp;</td>
+	    			<td>${list.id}&nbsp;</td>
+	    			<td><a href= "${path}/detail?no=${list.no}">${list.name}&nbsp;</a></td>
+	    			<td>${list.rank}&nbsp;</td>
+	    			<td>${list.title}&nbsp;</td>
+	    			<td>${list.hit}&nbsp;</td>
+	    			<td><fmt:formatDate value="${list.date}" type="date" pattern="yyyy/MM/dd" /></td>
+	    			<td><fmt:formatDate value="${list.time}" type="time" pattern="HH:mm:ss" /></td>						
 	    		</tr>
 	    		</c:forEach>
 	    	</tbody>

@@ -66,6 +66,12 @@ public class BoardController {
 		return "redirect:board";
 	}
 	
+	@RequestMapping(value="/deleteComment", method=RequestMethod.GET)
+	public String deleteComment(String no) throws Exception{
+		service.deleteComment(no);
+		return "redirect:detail?no="+no;
+	}
+	
 	@RequestMapping(value = "/delete")
 	public String ajaxTest(HttpServletRequest request) {
 		String[] ajaxMsg = request.getParameterValues("valueArr");

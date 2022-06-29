@@ -50,4 +50,8 @@ public class BoardService {
     public List<CommentVo> getCommentList(int no){
     	return mapper.getCommentList(no);
     }
+    
+    public void deleteComment(String no) {
+    	mapper.deleteComment(no);
+    }
 }

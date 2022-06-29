@@ -4,13 +4,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.center{
-	margin: 5px 25px; 
-	padding: 20px;
-}
-</style>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../../../../../css/insert.css">
 <meta charset="EUC-KR">
 <title>Insert</title>
 </head>
@@ -36,13 +31,14 @@
 			</div>
 			<div class="col-md-12">
 				<label>CONTENT</label>
-				<input type="text" class="form-control" name="content" placeholder="Please write CONTENT">
+				<textarea class="form-control" name="content" placeholder="Please write CONTENT" style="padding-bottom:50px;"></textarea>
 			</div>
 			<div class="col-md-4">
 				<label>PASSWORD</label>
 				<input type="text" class="form-control" name="password" placeholder="Please write PASSWORD">
 			</div>
 		</div>
+		<br>
 		<button type="submit" class="btn btn-outline-info">save</button>
 		<button type="button" class="btn btn-outline-info"><a href="board">back</a></button>	
 	</form>

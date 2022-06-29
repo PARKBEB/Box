@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+<link rel="stylesheet" type="text/css" href="../../../../../css/board.css">
 <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script type="text/javascript">
 		$(function(){
@@ -64,6 +65,7 @@
 <title>Board list</title>
 </head>
 <body>
+<div class="wrapper">
     <h1>Search page</h1>
     <form name="searchForm" action="search" autocomplete="off">
     	<select name="type">
@@ -112,5 +114,6 @@
     	<input type="button" value="Del" onClick="deleteValue();">
     	<a href= "board">home</a>
     </form>
+</div>
 </body>
 </html>

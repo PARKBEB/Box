@@ -4,6 +4,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../../../../../css/detail.css">
 <script>
 	function password(){
 		var count = 0;
@@ -44,51 +46,47 @@
 <title>Detail</title>
 </head>
 <body>
-	<h2>Detail</h2>
+<div class="detail">
+<div class="wrapper">
+	<h1>Detail</h1>
+	<input type="button" onclick="passwordMod()" name="mod" value="modify" class="btn"></input>
+	<input type="button" onclick="password()" name="del" value="delete" class="btn"></input>
+	<a href= "board" class="btn">home</a>
+</div>
 	<table border="1">
-		<th>Title</th>
-		<th>Data</th>
 		<tr>
-			<td>indate</td>
+			<th>id</th><td>${data.id}</td>
+			<th>indate</th>
 			<td><fmt:formatDate value="${data.date}" pattern="yyyy-MM-dd" /></td>
+			<th>name</th><td>${data.name}</td>
+			<th>rank</th><td>${data.rank}</td>	
 		</tr>
 		<tr>
-			<td>number</td><td>${data.no}</td>
+			<th>title</th><td colspan="7">${data.title}</td>	
 		</tr>
 		<tr>
-			<td>name</td><td>${data.name}</td>
-		</tr>
-		<tr>
-			<td>rank</td><td>${data.rank}</td>	
-		</tr>
-		<tr>
-			<td>title</td><td>${data.title}</td>	
-		</tr>
-		<tr>
-			<td>content</td><td>${data.content}</td>	
-		</tr>
-		<tr>
-			<td>id</td><td>${data.id}</td>
+			<th>content</th>
+			<td colspan="7">
+			<textarea style="border: none" rows="9" cols="50">${data.content}</textarea>
+			</td>	
 		</tr>
 	</table>
-		<input type="button" onclick="passwordMod()" name="mod" value="modify"></input>
-		<input type="button" onclick="password()" name="del" value="delete"></input>
-		<a href= "board">home</a>
 	<!-- Comment -->
 		<h2>Leave a Comment</h2>
-		<form name="commentForm" action="commentWrite" method="post" autocomplete="off">
+		<form name="commentForm" action="commentWrite" method="post" autocomplete="off" class="commentF">
 			<div class="reply" style="display:none;">
 				<input type="number" name="no" value="${data.no}" />
 			</div>
-				<textarea name="content" rows="3"></textarea>
-			<button type="submit">save</button>
+				<textarea name="content" rows="3" cols="59"></textarea>
+			<br>
+			<button type="submit" class="btn">save</button>
 		</form>
 		<c:forEach items="${commentList}" var="commentList">
-			<div>${commentList.no}</div>
-			<div>${commentList.writer}</div>
-			<div>${commentList.date}</div>
-			<div>${commentList.content}</div>
+			<div class="dateC">${commentList.date}</div>
+			<div class="conC">${commentList.content}
+			<a href="deleteComment?no=${data.no}">delete</a>
+			</div>
 		</c:forEach>
-		
+</div>		
 </body>
 </html>
