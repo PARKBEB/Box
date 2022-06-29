@@ -22,6 +22,23 @@
 			alert("delete fail");
 		}
 	}
+	function passwordMod(){
+		var count = 0;
+		var pass = prompt('please write password');
+		
+		while(count <= 1){
+			if(pass == "${data.password}"){
+				alert("update");
+				location.href="update?no=${data.no}";
+				break;
+			}else count+=1
+			
+			var pass = prompt('no password');
+		}
+		if(count == 2){
+			alert("update fail");
+		}
+	}
 </script>
 <meta charset="EUC-KR">
 <title>Detail</title>
@@ -54,10 +71,8 @@
 			<td>id</td><td>${data.id}</td>
 		</tr>
 	</table>
-		<a href="update?no=${data.no}" role="button" class="btn btn-outline-info">modify</a>
-		<!--<a href="delete?no=${data.no}" role="button" class="btn btn-outline-info">delete</a>
-		-->
-		<input type="button" onclick="password()" name="del" value="삭제"></input>
+		<input type="button" onclick="passwordMod()" name="mod" value="modify"></input>
+		<input type="button" onclick="password()" name="del" value="delete"></input>
 		<a href= "board">home</a>
 	<!-- Comment -->
 		<h2>Leave a Comment</h2>
