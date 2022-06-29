@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../../../../../css/board.css">
 <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script type="text/javascript">
@@ -67,7 +68,7 @@
 <body>
 <div class="wrapper">
     <h1>Search page</h1>
-    <form name="searchForm" action="search" autocomplete="off">
+    <form name="searchForm" action="search" autocomplete="off" class="searchF">
     	<select name="type">
     		<option selected value="">---</option>
     		<option value="all">all</option>
@@ -77,9 +78,9 @@
     		<option value="title">title</option>
     	</select>
     	<input type="text" name="keyword"></input>
-    	<button>search</button>
+    	<button class="btn">search</button>
     </form>
-	<form name="userForm">
+	<form name="userForm" class="userF">
 	    <table>
 	    	<thead>
 	    		<tr>
@@ -96,24 +97,24 @@
 	    	</thead>
 	    	<tbody>
 	    		<c:forEach items="${searchList}" var="searchList">
-	    		<tr>
-	    			<td class="text_ct"><input name="RowCheck" type="checkbox" value="${searchList.no}"</td>
-	    			<td class="text_ct">${searchList.rownum}&nbsp;</td>
-	    			<td class="text_ct">${searchList.id}&nbsp;</td>
-	    			<td class="text_ct"><a href= "${path}/detail?no=${searchList.no}">${searchList.name}&nbsp;</a></td>
-	    			<td class="text_ct">${searchList.rank}&nbsp;</td>
-	    			<td class="text_ct">${searchList.title}&nbsp;</td>
-	    			<td class="text_ct">${searchList.hit}&nbsp;</td>
-	    			<td class="text_ct"><fmt:formatDate value="${searchList.date}" type="date" pattern="yyyy/MM/dd" /></td>
-	    			<td class="text_ct"><fmt:formatDate value="${searchList.time}" type="time" pattern="HH:mm:ss" /></td>						
+	    		<tr class="trT">
+	    			<td><input name="RowCheck" type="checkbox" value="${searchList.no}"</td>
+	    			<td>${searchList.rownum}&nbsp;</td>
+	    			<td>${searchList.id}&nbsp;</td>
+	    			<td><a href= "${path}/detail?no=${searchList.no}">${searchList.name}&nbsp;</a></td>
+	    			<td>${searchList.rank}&nbsp;</td>
+	    			<td>${searchList.title}&nbsp;</td>
+	    			<td>${searchList.hit}&nbsp;</td>
+	    			<td><fmt:formatDate value="${searchList.date}" type="date" pattern="yyyy/MM/dd" /></td>
+	    			<td><fmt:formatDate value="${searchList.time}" type="time" pattern="HH:mm:ss" /></td>						
 	    		</tr>
 	    		</c:forEach>
 	    	</tbody>
 	    </table>
-    	<a href="<c:url value="insert" />" role="button" class="btn btn-outline-info">write</a>
-    	<input type="button" value="Del" onClick="deleteValue();">
-    	<a href= "board">home</a>
     </form>
+    	<a href="<c:url value="insert" />" role="button" class="btn">write</a>
+    	<input type="button" value="Del" onClick="deleteValue();" class="btn">
+    	<a href= "board" class="btn">home</a>
 </div>
 </body>
 </html>
