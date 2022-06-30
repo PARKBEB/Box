@@ -63,7 +63,7 @@
     </form>
       <ul class="paging">
 	    	<c:if test="${paging.prev}">
-	    		<span><a href='<c:url value="/board?page=${paging.startPage-1}"/>'>pre</a></span>
+	    		<span><a href='<c:url value="/board?page=${paging.startPage-1}"/>'>prev</a></span>
 	    	</c:if>
 	    	<c:forEach begin="${paging.startPage}" end="${paging.endPage}" var="num">
 	    		<span><a href='<c:url value="/board?page=${num}"/>'>${num}</a></span>

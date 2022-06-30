@@ -4,7 +4,7 @@
 	<select id="boardList" resultType="hashmap" parameterType="hashmap">
 		<![CDATA[	
 			select 
-				no, id, name, rank, title, hit, date, time, @ROWNUM := @ROWNUM + 1 AS rownum 
+				no, id, name, rank, title, hit, date, time, FORMAT(@ROWNUM := @ROWNUM+1, 0) rownum 
 			from board, (select @rownum:=0) temp
 			limit #{pageStart},#{perPageNum} 
 		]]>
