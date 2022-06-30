@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -13,19 +14,43 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.example.demo.service.BoardService;
 import com.example.demo.vo.BoardVo;
 import com.example.demo.vo.CommentVo;
+import com.example.demo.vo.CriteriaVo;
+import com.example.demo.vo.PagingVo;
+
 
 @Controller
 public class BoardController {
     @Autowired
     public BoardService service;
     
+/*   
 	@RequestMapping(value = "/board", method = RequestMethod.GET)
-	public String getList(Model model){
+	public String getList(Model model, BoardVo vo){
 		List<BoardVo> list = service.list();
+		System.out.print("옴");
 		model.addAttribute("list", list);
+
 		return "board";
 	}	
 	
+*/
+    @RequestMapping(value="/board")
+    public String boardList(CriteriaVo cri, Model model) throws Exception{
+    	int boardListCnt = service.boardListCnt();
+    	
+    	PagingVo paging = new PagingVo();
+    	paging.setCri(cri);
+    	paging.setTotalCount(boardListCnt);
+    	System.out.println("되는중");
+    	List<Map<String, Object>> list = service.boardList(cri);
+    	System.out.println("되는중2"+list);
+    	model.addAttribute("list", list);
+    	model.addAttribute("paging", paging);
+    	System.out.println("되는중3"+paging);
+    	
+    	return "board";
+    }
+    
 	@RequestMapping(value = "/insert", method = RequestMethod.GET)
 	public String Insert() throws Exception{
 		return "insert";
@@ -95,4 +120,5 @@ public class BoardController {
 		String url="redirect:detail?no="+Integer.toString(no);
 		return url;
 	}
+
 }

@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,17 +9,25 @@ import org.springframework.stereotype.Service;
 import com.example.demo.mapper.BoardMapper;
 import com.example.demo.vo.BoardVo;
 import com.example.demo.vo.CommentVo;
+import com.example.demo.vo.CriteriaVo;
 
 @Service
-public class BoardService {
+public class BoardService{
 
     @Autowired
     public BoardMapper mapper;
     
+    public int boardListCnt(){
+    	return mapper.boardListCnt();
+    }
+    
     public List<BoardVo> list(){
     	return mapper.list();
     }
-
+    public List<Map<String, Object>> boardList(CriteriaVo cri) throws Exception{
+    	return mapper.boardList(cri);
+    }
+    
     public void insert(BoardVo vo) {
     	mapper.insert(vo);
     }

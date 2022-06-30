@@ -79,7 +79,7 @@
 			</div>
 				<textarea name="content" rows="3" cols="59"></textarea>
 			<br>
-			<button type="submit" class="btn">save</button>
+			<button type="submit" class="btn" style="margin-bottom: 2%;">save</button>
 		</form>
 		<c:forEach items="${commentList}" var="commentList">
 			<div class="dateC">${commentList.date}</div>

@@ -3,7 +3,7 @@ package com.example.demo.vo;
 import java.sql.Time;
 import java.util.Date;
 
-public class BoardVo {
+public class BoardVo{
     private int     no;
     private String	id;
     private String	name;

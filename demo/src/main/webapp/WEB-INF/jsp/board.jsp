@@ -61,6 +61,17 @@
 	    	</tbody>
 	    </table>
     </form>
+      <ul class="paging">
+	    	<c:if test="${paging.prev}">
+	    		<span><a href='<c:url value="/board?page=${paging.startPage-1}"/>'>pre</a></span>
+	    	</c:if>
+	    	<c:forEach begin="${paging.startPage}" end="${paging.endPage}" var="num">
+	    		<span><a href='<c:url value="/board?page=${num}"/>'>${num}</a></span>
+	    	</c:forEach>
+	    	<c:if test="${paging.next && paging.endPage>0}">
+	    		<span><a href='<c:url value="/board?page=${paging.endPage+1}"/>'>next</a></span>
+	    	</c:if>
+	    </ul>
 </div>
 </body>
 </html>

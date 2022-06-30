@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.mapper.BoardMapper">
-	<select id="list" resultType="BoardVo">
-		select 
-			no, id, name, rank, title, hit, date, time, @ROWNUM := @ROWNUM + 1 AS rownum 
-		from board, (select @rownum:=0) temp
+	<select id="boardList" resultType="hashmap" parameterType="hashmap">
+		<![CDATA[	
+			select 
+				no, id, name, rank, title, hit, date, time, @ROWNUM := @ROWNUM + 1 AS rownum 
+			from board, (select @rownum:=0) temp
+			limit #{pageStart},#{perPageNum} 
+		]]>
 	</select>
-	
+	<select id="boardListCnt" resultType="int">
+		select count(*)
+		from board
+	</select>
 	<insert id="insert">
 		insert into board (id,name,rank,title,content,password,hit,date,time)
 				values (#{id},#{name},#{rank},#{title},#{content},#{password},#{hit},NOW(),NOW())
@@ -74,6 +80,7 @@
 		delete from comment 
 		where no = #{no}
 	</delete>
+
 </mapper>
 
 
