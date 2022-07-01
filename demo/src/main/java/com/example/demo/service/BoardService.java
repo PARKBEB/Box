@@ -60,7 +60,7 @@ public class BoardService{
     	return mapper.getCommentList(no);
     }
     
-    public void deleteComment(String no) {
+    public void deleteComment(int no) {
     	mapper.deleteComment(no);
     }
 }

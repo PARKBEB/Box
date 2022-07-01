@@ -67,7 +67,7 @@
 		<tr>
 			<th>content</th>
 			<td colspan="7">
-			<textarea style="border: none" rows="9" cols="50">${data.content}</textarea>
+			<textarea style="border: none" rows="15" cols="71">${data.content}</textarea>
 			</td>	
 		</tr>
 	</table>
@@ -75,16 +75,16 @@
 		<h2>Leave a Comment</h2>
 		<form name="commentForm" action="commentWrite" method="post" autocomplete="off" class="commentF">
 			<div class="reply" style="display:none;">
-				<input type="number" name="no" value="${data.no}" />
+				<input type="number" name="no" value="${commentList.no}" />
 			</div>
-				<textarea name="content" rows="3" cols="59"></textarea>
+				<textarea name="content" rows="3" cols= "81"></textarea>
 			<br>
 			<button type="submit" class="btn" style="margin-bottom: 2%;">save</button>
 		</form>
 		<c:forEach items="${commentList}" var="commentList">
 			<div class="dateC">${commentList.date}</div>
 			<div class="conC">${commentList.content}
-			<a href="deleteComment?no=${data.no}">delete</a>
+			<a href="deleteComment?no=${commentList.no}">delete</a>
 			</div>
 		</c:forEach>
 </div>		

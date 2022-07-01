@@ -92,7 +92,7 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/deleteComment", method=RequestMethod.GET)
-	public String deleteComment(String no) throws Exception{
+	public String deleteComment(int no) throws Exception{
 		service.deleteComment(no);
 		return "redirect:detail?no="+no;
 	}
