@@ -75,7 +75,7 @@
 		<h2>Leave a Comment</h2>
 		<form name="commentForm" action="commentWrite" method="post" autocomplete="off" class="commentF">
 			<div class="reply" style="display:none;">
-				<input type="number" name="no" value="${commentList.no}" />
+				<input type="number" name="no" value="${data.no}" />
 			</div>
 				<textarea name="content" rows="3" cols= "81"></textarea>
 			<br>
@@ -84,7 +84,7 @@
 		<c:forEach items="${commentList}" var="commentList">
 			<div class="dateC">${commentList.date}</div>
 			<div class="conC">${commentList.content}
-			<a href="deleteComment?no=${commentList.no}">delete</a>
+				<a href="deleteComment?cno=${commentList.cno}&no=${data.no}">delete</a>
 			</div>
 		</c:forEach>
 </div>		

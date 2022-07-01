@@ -24,5 +24,5 @@ public interface BoardMapper {
    List<BoardVo> search(String type,String keyword);
    void commentWrite(int no, String content);
    List<CommentVo> getCommentList(int no);
-   void deleteComment(int no);
+   void deleteComment(int cno);
 }

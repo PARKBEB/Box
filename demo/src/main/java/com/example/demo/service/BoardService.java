@@ -54,13 +54,15 @@ public class BoardService{
     
     public void commentWrite(int no, String content) {
     	mapper.commentWrite(no, content);
+    	System.out.print("온다2");
     }
     
     public List<CommentVo> getCommentList(int no){
     	return mapper.getCommentList(no);
     }
     
-    public void deleteComment(int no) {
-    	mapper.deleteComment(no);
+    public void deleteComment(int cno) {
+    	System.out.print("이거다이거다이거다이거다이거다2");
+    	mapper.deleteComment(cno);
     }
 }

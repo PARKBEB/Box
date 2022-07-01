@@ -67,6 +67,7 @@ public class BoardController {
 		BoardVo data = service.detail(no);
 		service.updateHit(no);
 		List<CommentVo> commentList = service.getCommentList(no);
+		System.out.print("여기 리스트를 봐주세요"+commentList);
 		model.addAttribute("commentList", commentList);
 		model.addAttribute("data", data);
 		return "detail";
@@ -92,9 +93,10 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/deleteComment", method=RequestMethod.GET)
-	public String deleteComment(int no) throws Exception{
-		service.deleteComment(no);
-		return "redirect:detail?no="+no;
+	public String deleteComment(int no, int cno) throws Exception{
+		service.deleteComment(cno);
+		System.out.print("이거다이거다이거다1");
+		return "redirect:detail?no="+Integer.toString(no);
 	}
 	
 	@RequestMapping(value = "/delete")
@@ -117,6 +119,7 @@ public class BoardController {
 	@RequestMapping(value = "/commentWrite", method = RequestMethod.POST)
 	public String commentWrite(int no, String content) throws Exception{
 		service.commentWrite(no, content);
+		System.out.print("온다1");
 		String url="redirect:detail?no="+Integer.toString(no);
 		return url;
 	}

@@ -71,14 +71,14 @@
 	</insert>
 	
 	<select id="getCommentList" resultType="CommentVo">
-		select no,writer,date, content 
-		from comment 
-		where no= #{no}
+		select cno, writer,date, content 
+		from comment
+		where no = #{no}
 	</select>
 	
 	<delete id="deleteComment">
 		delete from comment 
-		where no = #{no}
+		where cno = #{cno}
 	</delete>
 
 </mapper>
