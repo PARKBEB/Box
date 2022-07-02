@@ -79,6 +79,9 @@
     	</select>
     	<input type="text" name="keyword"></input>
     	<button class="btn">search</button>
+    	<a href="<c:url value="insert" />" role="button" class="btn">write</a>
+    	<input type="button" value="Del" onClick="deleteValue();" class="btn">
+    	<a href= "board" class="btn">home</a>
     </form>
 	<form name="userForm" class="userF">
 	    <table>
@@ -112,9 +115,6 @@
 	    	</tbody>
 	    </table>
     </form>
-    	<a href="<c:url value="insert" />" role="button" class="btn">write</a>
-    	<input type="button" value="Del" onClick="deleteValue();" class="btn">
-    	<a href= "board" class="btn">home</a>
 </div>
 </body>
 </html>

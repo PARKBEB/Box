@@ -5,32 +5,43 @@
 <html>
 <head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../../../../../css/detail.css">
 <meta charset="EUC-KR">
 <title>UPDATE</title>
 </head>
 <body>
-	<h2>Update</h2>
+<div class="detail">
+<div class="wrapper">
+	<h1>Update</h1>
+</div>
 	<form name="update" method="POST" action="${path}/update?no=${data.no}">
-		<div>no : ${data.no}</div>
-		<div>name :  </div>
-		<div><input name="name" value="${data.name}" type="text" /></div>
-		<div>id :  </div>
-		<div><input name="id" value="${data.id}" type="text" /></div>
-		<div>rank</div>
-		<div><input name="rank" value="${data.rank}" type="text" /></div>
-		<div>title</div>
-		<div><input name="title" value="${data.title}" type="text" /></div>
-		<div>content</div>
-		<div><input name="content" value="${data.content}" type="text" /></div>
-		<div>indate</div>
-		<div><fmt:formatDate value="${data.date}" pattern="yyyy-MM-dd" /></div>
-		<div>intime :  </div>
-		<div><fmt:formatDate value="${data.time}" pattern="HH:mm:ss" /></div>
-		
-		<div>
-			<input type="submit" class="btn btn-outline-info" value="save" />
-			<input type="reset" class="btn btn-outline-info" value="reset" />
-		</div>
+	<table border="1" style="margin-bottom:1%;">
+		<tr>
+			<th>id</th>
+			<td><input name="id" value="${data.id}" type="text" size=4 /></td>
+			<th>indate</th>
+			<td><fmt:formatDate value="${data.date}" pattern="yyyy-MM-dd"/></td>
+			<th>name</th>
+			<td><input name="name" value="${data.name}" type="text" size=10  /></td>
+			<th>rank</th>
+			<td><input name="rank" value="${data.rank}" type="text" size=10  /></td>
+		</tr>
+		<tr>
+			<th>title</th>
+			<td colspan="7"><input name="title" value="${data.title}" type="text" size=71 /></td>
+		</tr>
+		<tr>
+			<th>content</th>
+			<td colspan="7">
+				<textarea name="content" style="border: none" rows="15" cols="71">${data.content}</textarea>
+			</td>
+		</tr>	
+	</table>
+	<div class="wrapper">
+		<input type="submit" class="btn" value="save" />
+		<input type="reset" class="btn" value="reset" />
+	</div>
 	</form>
+</div>
 </body>
 </html>
