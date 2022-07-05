@@ -15,6 +15,10 @@ function clock(){
   chrS = String(chrS).padStart(2, "0");
 
   clockTitle.innerText = `${chrD}d ${chrH}h ${chrM}m ${chrS}s`;
+
+  if(dday < today){
+    return clockTitle.innerText = "Merry christmas!";
+   }
 }
 
 clock();
