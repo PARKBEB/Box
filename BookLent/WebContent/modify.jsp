@@ -16,16 +16,20 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
- *{margin: 0; padding: 0;}
-  ul,li{display: inline-block;}
-  h1{background: #000; color: #fff; width: 100%; font-size: 35px; height: 50px; text-align: center; padding:30px;}
-  nav { width: 100%;background: #bbb; color: #fff;}
+*{margin: 0; padding: 0;}
+  ul,li{display: inline-block; margin-top:20px;}
+  a{text-decoration:none; color: #000;}
+  nav { width: 100%;color: #000; font-size:30px;}
   ul li{ padding-left: 20px;}
-  h2{text-align: center; margin-top: 40px;}
-  section{padding-top:40px; height: 330px;}
+  span{margin-left:50%;}
+  span a{ font-size: 45px; font-weight: bolder; color: gold; }
+  hr{background-color: #d3d3d3;}
+  section{padding-top:30px; height: 330px;}
   table{margin: 0 auto;}
-  th,td{border: 1px solid #000;}
-  footer{background: #000; color: #fff; height: 50px; text-align: center;}
+  th,td{border: 1px solid #000; font-size: 50px;}
+  th{background-color: gold;}
+  td{font-size:40px; padding-left:15px;}
+  input{height: 60px; font-size:20px; border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;}
 </style>
 <script>
 function send(){
@@ -75,62 +79,59 @@ function send(){
 </script>
 </head>
 <body>
-	<h1>(과정평가형 정보처리 산업기사)도서 관리 프로그램 ver3.0</h1>
 	<nav>
 		<ul>
+			<li><a href = "/list.jsp">전체 회원 조회</a></li>
 			<li><a href = "/insert.jsp">회원등록</a></li>
-			<li><a href = "/list.jsp">회원목록조회</a></li>
-			<li><a href = "/lent.jsp">도서대출등록</a></li>
-			<li><a href = "/book_list.jsp">도서대출현황</a></li>
-			<li><a href = "/book.jsp">도서등록</a></li>
-			<li><a href = "/lent_list.jsp">도서별대출현황</a></li>
-			<li><a href = "/index.jsp">홈으로</a></li>
+			<li><a href = "/book.jsp">도서신청</a></li>
+			<li><a href = "/lent.jsp">도서대출</a></li>
 			<li><a href = "/return.jsp">도서반납</a></li>
+			<li><a href = "/book_list.jsp">도서대출현황</a></li>
+			<li><a href = "/lent_list.jsp">회원별 도서내역</a></li>
 		</ul>
+		<span><a href = "/index.jsp">HOME</a></span>
 	</nav>
-	<h2>과정평가형 자격 CBQ</h2>
+	<br>
+	<hr>
 	<section>
 	<form name = "frm" method="post" action = "modify_pro.jsp">
 		<table>
 		 <tr>
 		 	<th>회원번호(자동생성)</th>
-		 	<td><input type = "text" name ="userno" value = "<%= vo.getUserno() %>" readonly></td>
+		 	<td><input type = "text" style = "font-size:40px;" name ="userno" value = "<%= vo.getUserno() %>" readonly></td>
 		 </tr>  
 		 <tr>
 		 	<th>회원성명</th>
-		 	<td><input type = "text" name ="name" value = "<%= vo.getName() %>"></td>
+		 	<td><input type = "text" style = "font-size:30px;" name ="name" value = "<%= vo.getName() %>"></td>
 		 </tr>    
 		 <tr>
 		 	<th>고객전화</th>
-		 	<td><input type = "text" name ="phone1" value = "<%= vo.getPhone1() %>" size = "6">-
-		 		<input type = "text" name ="phone2" value = "<%= vo.getPhone2() %>" size = "6">-
-		 		<input type = "text" name ="phone3" value = "<%= vo.getPhone3() %>" size = "6">
+		 	<td><input type = "text" style = "font-size:25px;" name ="phone1" value = "<%= vo.getPhone1() %>" size = "6">-
+		 		<input type = "text" style = "font-size:25px;" name ="phone2" value = "<%= vo.getPhone2() %>" size = "6">-
+		 		<input type = "text" style = "font-size:25px;" name ="phone3" value = "<%= vo.getPhone3() %>" size = "6">
 		 	</td>
 		 </tr>
 		 <tr>
 		 	<th>회원성별</th>
-		 	<td><input type = "radio" name ="gender" value = "M" <%if(vo.getGender().equals("M")){out.print("checked");} %>>남자
-		 		<input type = "radio" name ="gender" value = "F" <%if(vo.getGender().equals("F")){out.print("checked");} %>>여자
+		 	<td><input type = "radio" style="width:25px;height:25px;border:1px;" name ="gender" value = "M" <%if(vo.getGender().equals("M")){out.print("checked");} %>>남자
+		 		<input type = "radio" style="width:25px;height:25px;border:1px;" name ="gender" value = "F" <%if(vo.getGender().equals("F")){out.print("checked");} %>>여자
 		 	</td>
 		 </tr>   
 		 <tr>
 		 	<th>생년월일</th>
-		 	<td><input type = "text" name ="birthday" value = "<%= vo.getBirthday() %>"></td>
+		 	<td><input type = "text" style = "font-size:30px;" name ="birthday" value = "<%= vo.getBirthday() %>"></td>
 		 </tr>   
 		 <tr>
 		 	<th>가입일자</th>
-		 	<td><input type = "text" name ="regdate" value = "<%= vo.getRegdate() %>"readonly>예)20200207</td>
+		 	<td><input type = "text" style = "font-size:35px;" name ="regdate" value = "<%= vo.getRegdate() %>"readonly>예)20200207</td>
 		 </tr>      
 		 <tr>
-		 	<th colspan = "2" class = "btn">
-		 	<input type  = "button" value = "등록하기" onClick = "send()">
-		 	<input type  = "button" value = "다시쓰기" onClick = "del()">
+		 	<th colspan = "2" class = "btn" style = "height: 90px;">
+		 	<input type  = "button" style = "font-size:30px; border: 1px solid #000;" value = "등록하기" onClick = "send()">
+		 	<input type  = "button" style = "font-size:30px; border: 1px solid #000;" value = "다시쓰기" onClick = "reset()">
 		 </tr>
 		</table>
 		</form>
 	</section>
-	<footer>
-		HRDKOREAN Copy@2020 All right Development Korea
-	</footer>
 </body>
 </html>
