@@ -1,0 +1,25 @@
+html{
+    margin: 0;
+}
+
+body{
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: start;
+    height: 100%;
+}
+
+.wrapper{
+     background-image: url("../img/goal_IMG.jpg");
+     background-size: 360px 100%;
+     width: 360px;
+     height: 640px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    }
+
+    .hidden{
+        display: none;
+    }
