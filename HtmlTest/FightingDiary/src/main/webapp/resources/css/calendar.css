@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+/*default*/
+* {margin:0px; padding:0px; vertical-align: baseline; font-family:"azo-sans-web", sans-serif; line-height:1em; font-size:13px; text-align:center; color:#212121;}
+
+html,body{
+	height: 100%;	
+}
+
+.backImg{
+	background-image: url("/resources/img/checkBackground.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 55%;
+}
+
+/*캘린더*/
+/* Kurien / Kurien's Blog / http://blog.kurien.co.kr */
+/* 주석만 제거하지 않는다면, 어떤 용도로 사용하셔도 좋습니다. */
+
+#kCalendar {
+	width: 100%; 
+	height: 100%;
+	}
+
+#kCalendar #header {
+	height: 70px; 
+	line-height: 160px; 
+	text-align: center; 
+	font-weight: bold;
+	}
+#kCalendar #date{
+	font-size: 60px; 
+	font-family: 'GyeonggiBatang';
+	}
+#kCalendar .fas{
+	font-size: 40px;
+	text-decoration: none;
+	color: rgb(355,215,0);
+	}
+
+#kCalendar table {
+	width: 100%; 
+	height: 85%; 
+	margin-top: 60px;
+	}
+#kCalendar caption {
+	display: none;
+	}
+/*요일*/
+#kCalendar .sun {
+	text-align: center; 
+	font-size: 45px; 
+	padding:5px 0 5px 0;
+	border-top: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	}
+#kCalendar .mon {
+	text-align: center; 
+	font-size: 45px; 
+	border-top: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	}
+#kCalendar .tue {
+	text-align: center; 
+	font-size: 45px; 
+	border-top: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	}
+#kCalendar .wed {
+	text-align: center; 
+	font-size: 45px; 
+	border-top: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	}
+#kCalendar .thu {
+	text-align: center; 
+	font-size: 45px; 
+	border-top: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	}
+#kCalendar .fri {
+	text-align: center; 
+	font-size: 45px; 
+	border-top: 1px solid #000;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	}
+#kCalendar .sat {
+	text-align: center; 
+	font-size: 45px; 
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	
+	}
+/*날짜*/
+#kCalendar td{
+	line-height: 120px; 
+	font-weight: bolder;
+	}
+/*모아보기 버튼*/
+#all{
+	background-color: #aed581;
+	padding: 5px 40px 5px 40px;
+	border: 0;
+	outline: 0;
+	border-radius: 10px 10px 10px 10px;
+	font-family: GyeonggiBatang; 
+	font-size: 45px;
+	font-weight: bolder;
+	margin: 0 0 30px 250px;
+}
+/*한 줄 일기*/
+img{
+	margin: 30px 60% 0 0;
+}
+
+.modifyBox{
+	text-align: right;
+	margin-top:53%;
+}
+
+i{
+	font-size: 70px;
+	margin-right: 50px;
+	text-align: right;
+}
