@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.BoardMapper">
+	<select id="boardList" resultType="hashmap" parameterType="hashmap">
+		<![CDATA[	
+			select 
+				no, id, name, rank, title, hit, date, time, FORMAT(@ROWNUM := @ROWNUM+1, 0) rownum 
+			from board, (select @rownum:=0) temp
+			limit #{pageStart},#{perPageNum} 
+		]]>
+	</select>
+	<select id="boardListCnt" resultType="int">
+		select count(*)
+		from board
+	</select>
+	<insert id="insert">
+		insert into board (id,name,rank,title,content,password,hit,date,time)
+				values (#{id},#{name},#{rank},#{title},#{content},#{password},#{hit},NOW(),NOW())
+	</insert>
+	
+	<select id="detail" resultType="BoardVo">
+		select 
+			no, id, name, rank, title, content, date, time, password
+		from board where no = #{no}
+	</select>
+	
+	<update id="update">
+		update board
+		set name = #{name}, rank = #{rank},title = #{title},content = #{content}, id = #{id}, time = NOW(), date = NOW()
+		where no = #{no}
+	</update>
+	
+	<delete id="delete">
+		delete from board 
+		where no = #{no}
+	</delete>
+	
+	<update id="updateHit" >
+		update board
+		set hit = hit+1
+		where no = #{no}
+	</update>
+	
+	<select id="search" parameterType="String" resultType="BoardVo">
+		select no, id, name, rank, title, hit, date, time, @ROWNUM := @ROWNUM + 1 AS rownum 
+		from board, (select @rownum:=0) temp
+		where 
+		<choose>
+		<when test="type == 'id'.toString()">
+			(id like CONCAT('%',#{keyword},'%'))
+		</when>
+		  <when test="type == 'name'.toString()">
+			(name like CONCAT('%',#{keyword},'%'))
+		</when>
+		<when test="type == 'rank'.toString()">
+			(rank like CONCAT('%',#{keyword},'%'))
+		</when>
+		<when test="type == 'title'.toString()">
+			(title like CONCAT('%',#{keyword},'%'))
+		</when>
+		<otherwise>
+			(id like CONCAT('%',#{keyword},'%') OR name like CONCAT('%',#{keyword},'%') OR rank like CONCAT('%',#{keyword},'%'))
+		</otherwise>
+		</choose> 
+	</select>
+	
+	<insert id="commentWrite">
+		insert into comment 
+		(no, writer, date, content)
+		values (#{no}, 1, NOW(), #{content})
+	</insert>
+	
+	<select id="getCommentList" resultType="CommentVo">
+		select cno, writer,date, content 
+		from comment
+		where no = #{no}
+	</select>
+	
+	<delete id="deleteComment">
+		delete from comment 
+		where cno = #{cno}
+	</delete>
+
+</mapper>
+
+
+
