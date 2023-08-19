@@ -1,0 +1,191 @@
+@media (prefers-reduced-motion: no-preference) {
+    #root ul {
+        margin-top: 30%;
+        margin-left: -10%;
+        font-size: 22px;
+    }
+
+    #root li {
+        margin-top: 50%;
+        display: flex;
+        color: #fff;
+    }
+
+    ul :link{
+        text-decoration: none;
+    }
+
+    .main-wrap {
+        position: relative;
+        height: 100%;
+        background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ),url('img/dubai.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+
+    .main-wrap .main-top {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main-wrap .main-top .menu-bars {
+        margin-left: 32px;
+        width: 32px;
+        height: 32px;
+        transition: 350ms;
+        background-image: url('img/iconmonstr-menu-1-32.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .main-wrap .main-top span {
+        margin-right: 32px;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .main-wrap .menu-bars-close {
+        margin-top: 34px;
+        margin-left: 12%;
+        width: 32px;
+        height: 32px;
+        background-image: url('img/iconmonstr-x-mark-2-32.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .nav-menu {
+        background-color: #060b26;
+        width: 250px;
+        height:100vh;
+        display:flex;
+        position:fixed;
+        top: 0;
+        left:-100%;
+        transition: 850ms;
+    }
+    .nav-menu.active {
+        left: 0;
+        transition: 350ms;
+    }
+
+    .main-mid {
+        margin: 40px auto;
+        width: 1000px;
+    }
+
+    .main-mid .banners {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-mid .banners .banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 220px;
+        height: 120px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 5px;
+    }
+
+    .main-mid .banners .banner:nth-child(1) {
+        background: rgba(34, 147, 232, 0.9);
+    }
+
+    .main-mid .banners .banner:nth-child(2) {
+        background: rgba(98, 179, 37, 0.9);
+    }
+
+    .main-mid .banners .banner:nth-child(3) {
+        background: rgba(207, 141, 38, 0.9);
+    }
+
+    .main-mid .banners .banner:nth-child(4) {
+        background: rgba(206, 87, 72, 0.9);
+    }
+
+    .main-mid .mid-content {
+        margin-top: 40px;
+        width: 1000px;        
+    }
+
+    .main-mid .mid-content .mid-content-title {
+        display: flex;
+        padding-left: 32px;
+        height: 80px;
+        align-items: center;
+        color: #fff;
+        font-size: 18px;
+        background: rgba(38, 47, 63, 0.7);
+        
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .main-mid .mid-content table {
+        width: 1000px;
+        background: rgba(38, 47, 63, 0.7);        
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .main-mid .mid-content table tr {
+        border-bottom: 1px solid rgba(47, 58, 75, 0.7);
+    }
+
+    .main-mid .mid-content table tr:last-child {
+        border-bottom: none;
+    }
+
+    .main-mid .mid-content table th {
+        padding-left: 32px;
+        height: 40px;
+        background: rgba(47, 58, 75, 0.7);
+        color: #aaa;
+    }
+
+    .main-mid .mid-content table td {
+        padding-left: 32px;
+        height: 60px;
+        
+        color: #fff;
+    }
+
+    .main-mid .mid-content .mid-content-arrows {
+        display: flex;
+        margin-top: 20px;
+        width: 1000px;
+        justify-content: space-between;
+    }
+
+    .main-mid .mid-content .mid-content-arrows span {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(47, 58, 75, 0.7);
+        color: #fff;
+        border-radius: 5px;
+    }
+
+    .main-mid .mid-content .mid-content-arrows div {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #aaa;
+    }
+
+
+}
