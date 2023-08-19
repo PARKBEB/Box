@@ -1,0 +1,13 @@
+h1{
+    font-family: 'Indie Flower', cursive;
+    font-size: 45px;
+    background: linear-gradient(to right top, #BF0A30, #D21F3C);  
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+  
+  h2{
+    font-family: 'Orelega One', cursive;
+    font-size: 30px;
+    font-weight: lighter;
+  }

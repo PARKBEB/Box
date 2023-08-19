@@ -1,0 +1,31 @@
+.father{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; 
+    height: 100vh;
+}
+
+.child{
+    display: flex;
+    background: hotpink;
+    color: white;
+    width: 200px;
+    height: 200px;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.child:nth-child(2){
+    background: #000;
+    flex-grow: 1;   /* 기본값 0 / 여분의 공간만큼 커짐 */
+}
+
+/*
+.child:nth-child(2){
+    background: #000;
+    flex-shrink: 2;  화면 축소시 다른 상자보다 2배 줄어듬 / 기본값 1
+}
+*/
+

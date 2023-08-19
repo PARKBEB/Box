@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/*default*/
+* {margin:0px; padding:0px; vertical-align: baseline; font-family:"azo-sans-web", sans-serif; line-height:1em; font-size:13px; text-align:center; color:#212121;}
+
+html,body{
+	height: 100%;	
+}
+
+.backImg{
+	background-image: url("/resources/img/checkBackground.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+}
+/*로고*/
+.smallTitleImg{
+	background-image: url("/resources/img/smallLogo.png");
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: -55px center;
+	height: 13%;
+}
+/*질문*/
+.question p{
+	font-family: 'GyeonggiBatang';
+	font-size: 53px;
+	font-weight: bolder;
+	text-align: left;
+	margin: 20px 0 40px 5px;
+}
+/*대답*/
+.question{
+	font-family: 'GyeonggiBatang';
+	font-size: 55px;
+	font-weight: bolder;
+	text-align: left;
+	margin-left: 30px;
+}
+/*라디오 버튼 크기*/
+.answer{
+	width: 30px;
+	height: 30px;
+	margin: 0 20px 80px 40px;
+}
+
+.btn{
+	font-family: GyeonggiBatang; 
+	font-size: 50px;
+	font-weight: bolder;
+	padding: 5px 40px 5px 40px;
+	border: 0;
+	outline: 0;
+	border-radius: 10px 10px 10px 10px;
+	background-color: rgb(355,215,0);
+}
+/*한 줄 일기*/
+.result p{
+	font-size: 60px;
+	text-align: left;
+	font-family: 'Nanum Myeongjo', serif;
+	margin: 40px 0 40px 20px;
+}
+
+.wLine{
+	border: none; 
+	background: transparent;	
+	maxlength:30; 
+	width: 95%;
+	font-size: 40px;
+}
+
+hr{
+	width: 930px; 
+	margin: 0 0 40px 20px;
+	border: thin solid #000;
+}

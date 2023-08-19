@@ -1,0 +1,29 @@
+.grid{
+    display: grid;
+    height: 50vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    /*
+    align-items: stretch;  수직 
+    justify-items: stretch;   default, 수평 
+    place-items: x y 
+    */
+    place-items: stretch center;
+    gap: 5px;
+}
+
+.header{
+    background-color: #f86368;
+}
+
+.content{
+    background-color: #9ec2e6;
+}
+
+.nav{
+    background-color: #f2d675;
+}
+
+.footer{
+    background-color: #68de7c;
+}

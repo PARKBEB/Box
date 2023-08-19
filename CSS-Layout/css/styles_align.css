@@ -1,0 +1,33 @@
+.father{
+    display: flex;  
+    flex-direction: column;    
+    justify-content: space-around;  
+    height: 100vh; /* height가 없으면 작동하지 않음 */
+}
+
+.child{
+    background: pink;
+    color: purple;
+    width: 200px;
+    height: 200px;
+    font-size: 30px;
+}
+
+/*.child:nth-child(2){
+    align-self: center;  < align-items는 전체 이동 / align-center는 지정된 박스만 이동 >
+}
+
+.child:nth-child(3){
+    align-self: flex-end;
+}*/
+
+.child:nth-child(1){
+    order: 2;
+    align-self: center;
+}
+
+.child:nth-child(2){
+    order: 3;
+}
+
+

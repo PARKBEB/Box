@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/*default*/
+* {margin:0px; padding:0px; vertical-align: baseline; font-family:"azo-sans-web", sans-serif; line-height:1em; font-size:13px; text-align:center; color:#212121;}
+
+html,body{
+	height: 100%;	
+}
+
+.backImg{
+	background-image: url("/resources/img/checkBackground.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+}
+
+/*로고*/
+.smallTitleImg{
+	background-image: url("/resources/img/smallLogo.png");
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: -55px center;
+	height: 13%;
+}
+
+/*힌트*/
+.hint{
+	margin-top: 30%;	
+}
+
+.txt{
+	maxlength:10; 
+	width: 43%;
+	font-size: 40px;
+	margin: 5% 0 5% 0;	
+}
+
+.btn{
+	font-family: GyeonggiBatang; 
+	font-size: 50px;
+	font-weight: bolder;
+	padding: 5px 40px 5px 40px;
+	border: 0;
+	outline: 0;
+	border-radius: 10px 10px 10px 10px;
+	background-color: rgb(355,215,0);
+}

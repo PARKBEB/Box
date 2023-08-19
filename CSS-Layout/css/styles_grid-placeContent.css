@@ -1,0 +1,30 @@
+/* item은 box 한 개, content는 grid 전체를 의미 */
+.grid{
+    background-color: black;
+    display: grid;
+    gap: 5px;
+    height: 250vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    /*
+    justify-content: space-between;
+    align-content: space-evenly;
+    */
+    place-content: end center;
+}
+
+.header{
+    background-color: #f86368;
+}
+
+.content{
+    background-color: #9ec2e6;
+}
+
+.nav{
+    background-color: #f2d675;
+}
+
+.footer{
+    background-color: #68de7c;
+}

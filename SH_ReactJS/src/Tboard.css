@@ -1,0 +1,103 @@
+@media (prefers-reduced-motion: no-preference) {
+    .main-wrap-tboard {
+        position: relative;
+        height: 100%;
+        background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url('img/sea.jpg');
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .main-wrap-tboard .main-top {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main-wrap-tboard .main-top .menu-bars {
+        margin-left: 32px;
+        width: 32px;
+        height: 32px;
+        transition: 350ms;
+        background-image: url('img/iconmonstr-menu-1-32.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .main-wrap-tboard .main-top span {
+        margin-right: 32px;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .main-wrap-tboard .menu-bars-close {
+        display: inherit;
+        margin-top: 34px;
+        margin-left: 12%;
+        width: 32px;
+        height: 32px;
+        background-image: url('img/iconmonstr-x-mark-2-32.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .main-mid-tboard .container{
+        margin-right: 12%;
+        margin-top: -16px;
+    }
+
+    .main-mid-tboard .container .row .col-md{
+        margin-top: 100px;
+        background-image: url('img/sanha.png');
+        background-size: cover;
+        background-color: honeydew;
+        margin-right: 40px;
+        height: 220px;
+        border-radius: 7px;
+        box-shadow: 0 4px 4px 1px black;
+    }
+
+    .main-mid-tboard .container .row .col-md p{
+        background-color: #c8e6c9;
+        color: green;
+        border-radius: 20px;
+        margin-top: 3%;
+        width: 140px;
+        padding: 4px 0 4px 0;
+        text-align: center;
+    }
+
+    .main-mid-tboard .container .row .col-sm{
+        background-color: white;
+        margin-top: -60px;
+        margin-right: 100px;
+        margin-left: 60px;
+        height: 100px;
+        border-radius: 7px;
+        box-shadow: 0 4px 4px 1px black;
+    }
+
+    .main-mid-tboard .container .row .col-sm :link{
+        text-decoration: none;
+    }
+
+    .main-wrap-tboard .main-top :link{
+        text-decoration: none;
+    }
+
+    .main-mid-tboard .container .row .col-sm h2{
+        margin-top: 17px;
+        font-size: 25px;
+        text-align: center;
+        color: black;
+    }
+
+    .main-mid-tboard .container .row .col-sm p{
+        text-align: center;
+        color: black;
+    }
+}
