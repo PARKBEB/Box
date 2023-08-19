@@ -1,0 +1,18 @@
+/* max-content 내용만큼 큰 크기 / min-content 내용을 담을 수 있는 최소한의 크기*/
+.grid{
+    color: white;
+    display: grid;
+    gap: 5px;
+    /* grid-template-columns: min-content max-content */
+    grid-template-columns: repeat(auto-fit, minmax(20px, max-content)) ; /* repeat(반복횟수, 그리드 배열 리스트(최솟값 / 최댓값 ))*/
+    grid-auto-rows: 100px;
+    margin-bottom: 30px;
+}
+
+.item:nth-child(odd){
+    background-color: pink;
+}
+
+.item:nth-child(even){
+    background-color: gray;
+}

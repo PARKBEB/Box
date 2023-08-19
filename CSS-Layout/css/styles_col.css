@@ -1,0 +1,14 @@
+.wrapper{
+    display: flex;  
+    flex-direction: column; /* main Axis : 세로 cross Axis :가로 */   
+    justify-content: space-around;  /* main Axis */
+    align-items: stretch;   /* cross Axis */
+    height: 100vh;
+}
+
+.box{
+    background: pink;
+    color: purple;
+    width: 200px;
+    height: 200px;
+}
